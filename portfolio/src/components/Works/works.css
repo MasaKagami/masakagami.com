@@ -20,6 +20,7 @@
 .worksDescription{
     font-weight: 300;
     font-size:1rem;
+    max-width: 45rem;
 }
 
 .worksImgs{
