@@ -9,11 +9,11 @@
 
 .bg{
     position:absolute;
-    top:4rem;
+    top:3rem;
     right:0; /* keeps it to the right side */
     z-index: -1;
     object-fit: cover;
-    height:70vh;
+    height:75vh;
 }
 
 .introContent{
@@ -74,4 +74,11 @@
     .hello{
         font-size: 4.5vw;
     }
+}
+
+@media screen and (max-width: 560px){
+    .bg{
+        right:-20vw;
+    }
+
 }
