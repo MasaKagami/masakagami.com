@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div>
         <section id='footer'>
-            
+
         </section>
     </div>
   )
