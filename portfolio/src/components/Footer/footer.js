@@ -1,13 +1,12 @@
 import React from 'react';
 import './footer.css';
-import React from 'react'
 
 const Footer = () => {
   return (
     <div>
-        <section id='footer'>
-
-        </section>
+        <footer className='footer'>
+            Copyright &#169; 2024 Nagamasa Kagami. All right reserved.
+        </footer>
     </div>
   )
 }
