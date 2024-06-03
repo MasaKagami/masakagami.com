@@ -1,4 +1,4 @@
-#intro{
+/* #intro{
     height: calc(100vh - 5rem);
     width: 100vw;
     max-width: 75rem;
@@ -10,7 +10,7 @@
 .bg{
     position:absolute;
     top:0rem;
-    right:0; /* keeps it to the right side */
+    right:0;
     z-index: -1;
     object-fit: cover;
     height:85vh;
@@ -21,7 +21,7 @@
     width:100vh;
     padding:2rem;
     font-size: 3rem;
-    font-weight: 700;/* font thickness */
+    font-weight: 700;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,6 +63,190 @@
     height: 0.8rem;
     cursor: cell;
 }
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+#intro{
+    height: calc(100vh - 5rem);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: pink; */
+}
+
+.intro-content{
+    width: 100%;
+    max-width: 70rem;
+    margin:0;
+    /* height: auto; */
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: space-evenly; */
+}
+
+.intro-content-body{
+    background-color: rgba(30,30,30,0);
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    margin: 0;
+    height: auto;
+}
+
+.intro-photo{
+    position:absolute;
+    top:0rem;
+    right: 12rem;
+    z-index: -1;
+    object-fit: cover;
+    height:85%;
+}
+
+.intro-text-intro {
+    font-size: 5rem;
+    font-weight: 800;
+    margin:0;
+    margin-bottom: -20px;
+}
+
+.intro-text-name{
+    font-size: 5rem;
+    font-weight: 800;
+    color:#2e5090;
+    margin:0;
+}
+
+.intro-text-sub{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.intro-button{
+    background: #333333;
+    margin: 1rem 0;
+    padding: 0.75rem 1.6rem;
+    color:white;
+    border:none;
+    border-radius: 10px;
+    cursor: cell;
+    transition: transform 0.3s ease;
+}
+
+.intro-button:hover{
+    transform: scale(1.05);
+}
+
+.intro-btnImg{
+    object-fit:cover;
+    margin:0 0.25rem;
+    height: 0.8rem;
+    cursor: cell;
+}
+
+.intro-content-link{
+    margin: 5px 0;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro-content-link a{
+    display: inline-flex; /*Ensures the anchor tag acts like a flex container*/
+    align-items: center; 
+    text-decoration: none; 
+}
+
+.intro-link-icons{
+    height: 2rem;
+    cursor:cell;
+    transition: transform 0.3s ease;  /* Smooth transition for scaling */
+    display: block;
+}
+
+.intro-link-icons:hover{
+    transform: scale(1.1); 
+     
+}
+
+
+
+#intro-typing{
+    font-size: 1.8rem;
+    font-weight: 00;
+}
+
+#intro-typing span{
+    color: #2e5090;
+    font-weight: 600;
+}
+
+.cursor {
+    font-weight: bold;
+    animation: blink 1s infinite;
+    color: #2e5090;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#dynamic-text {
+    display: inline-block; /* Needed for proper animation */
+    margin-left: 5px;
+    /* color:#2e5090; */
+}
+
+
+
+
+/* 
+#intro-typing {
+    font-size: 24px;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: black;
+    margin-left: 2px;
+    width: 2px;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#dynamic-text {
+    color: #555;
+    margin-left: 5px;
+}
+ */
+
+
+
+
 
 @media screen and (max-width: 840px){
     .bg{

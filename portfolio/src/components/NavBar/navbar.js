@@ -7,7 +7,10 @@ import { Link } from 'react-scroll'; //npmjs package
 const Navbar = () => {
   return (
         <nav className="navbar">
-            <img src={logo} alt="Logo" className='logo'/>
+            <div className='navbar-logo-name'>
+              <img src={logo} alt="Logo" className='logo'/>
+              <spam>Masa Kagami</spam>
+            </div>
             <div className="desktopMenu">
               <Link to="intro" spy={true} smooth={true} offset={50} duration={500} className="desktopMenuListItem">Home</Link>
               <Link to="/" spy={true} smooth={true} offset={50} duration={500} className="desktopMenuListItem">About</Link>

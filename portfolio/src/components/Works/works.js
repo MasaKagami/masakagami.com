@@ -8,13 +8,13 @@ const Works = () => {
         <h2 className="worksTitle">My Portfolio</h2>
         <span className="worksDescription">I take pride in paying....</span>
         <div className="worksImgs">
+            {/* <img src={Porfolio1} alt="" className="worksImg"/>
             <img src={Porfolio1} alt="" className="worksImg"/>
             <img src={Porfolio1} alt="" className="worksImg"/>
             <img src={Porfolio1} alt="" className="worksImg"/>
             <img src={Porfolio1} alt="" className="worksImg"/>
             <img src={Porfolio1} alt="" className="worksImg"/>
-            <img src={Porfolio1} alt="" className="worksImg"/>
-            <img src={Porfolio1} alt="" className="worksImg"/>
+            <img src={Porfolio1} alt="" className="worksImg"/> */}
         </div>
 
     </section>
