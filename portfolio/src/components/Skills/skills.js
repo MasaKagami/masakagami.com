@@ -8,6 +8,8 @@ import GitHubWhite from '../../assets/logos/github-white.png';
 const Skills = () => {
   return (
     <section id='skills'>
+      <h1>My Skills</h1>
+      <h2>Technical Skills</h2>
         {/* <span className='skillTitle'>About Me</span>
         <span className='skillDescription'>I am a skilled and passionate....</span>
         <div className='skills-content'>
@@ -44,7 +46,7 @@ const Skills = () => {
           </div>
         </div> */}
 
-        
+      
     </section>
   )
 }
