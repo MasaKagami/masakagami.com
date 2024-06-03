@@ -13,9 +13,10 @@ import btnImg from '../../assets/file.png';
 const Intro = () => {
   const phrases = [
     "a Passionate Learner.", 
-
-    "Town Hall Level 8.",
-    "stuck in Electrical Engineering."];
+    "a Brother",
+    "a Software Enthusiast",
+    "a Food Connoisseur",
+    "Town Hall Level 8."];
   const [dynamicText, setDynamicText] = useState('');
   const [currentPhrase, setCurrentPhrase] = useState(0);
   const [currentLetter, setCurrentLetter] = useState(0);
