@@ -3,14 +3,24 @@ import './skills.css';
 import UIDesign from '../../assets/ui-design.png';
 import WebDesign from '../../assets/website-design.png';
 import AppDesign from '../../assets/app-design.png';
-
+import GitHubWhite from '../../assets/logos/github-white.png';
 
 const Skills = () => {
   return (
     <section id='skills'>
-        <span className='skillTitle'>About Me</span>
+        {/* <span className='skillTitle'>About Me</span>
         <span className='skillDescription'>I am a skilled and passionate....</span>
-        <div className='skillBars'>
+        <div className='skills-content'>
+          <div className='skills-language'>
+            <h1>Programming Languages</h1>
+          </div>
+          <div className='skills-technologies'>
+            <h1>Web Technologies</h1>
+          </div>
+          <div className='skills-frameworks'>
+            <h1>Frameworks & Libraries</h1>
+          </div>
+          
           <div className='skillBar'>
             <img src={UIDesign} alt='' className="skillBarImg"/>
             <div className='skillBarText'>
@@ -32,7 +42,9 @@ const Skills = () => {
               <p>THis is a demo text</p>
             </div>
           </div>
-        </div>
+        </div> */}
+
+        
     </section>
   )
 }

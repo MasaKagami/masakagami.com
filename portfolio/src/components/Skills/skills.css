@@ -8,10 +8,10 @@
     justify-content: center;
     text-align: center;
     margin:0 auto;
-    /* background-color: aliceblue; */
+    background-color: aliceblue;
 }
 
-.skillTitle{
+/* .skillTitle{
     font-size: 3rem;
     font-weight: 600;
     padding-top: 3rem;
@@ -50,7 +50,7 @@
 .skillBarText>p{
     font-size: 0.9rem;
     font-weight:200;
-}
+} */
 
 @media screen and (max-width: 720px) {
     .skillBarText>p{
