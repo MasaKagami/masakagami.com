@@ -14,7 +14,7 @@ const Intro = () => {
   const phrases = [
     "a Passionate Learner.", 
 
-    "Town Hall 8.",
+    "Town Hall Level 8.",
     "stuck in Electrical Engineering."];
   const [dynamicText, setDynamicText] = useState('');
   const [currentPhrase, setCurrentPhrase] = useState(0);
