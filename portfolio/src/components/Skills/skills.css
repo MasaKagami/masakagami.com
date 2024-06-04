@@ -6,51 +6,79 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin:0 auto;
-    background-color: aliceblue;
+    margin:0;
 }
 
-/* .skillTitle{
-    font-size: 3rem;
-    font-weight: 600;
-    padding-top: 3rem;
-    margin-bottom: 1.5rem;
+.skills-header{
+    max-width: 70rem;
+    width: 100%;
+    align-items: left;
+    margin:0;
 }
 
-.skillDescription{
-    font-weight: 400;
-    font-size: 1rem;
-    max-width: 51rem;
-    padding: 0 2rem;
+.skills-header h1{
+    margin: .5rem 0;
 }
 
-.skillBars{
-    margin: 1.5rem;
-    width: 100vw;
-    max-width: 80%;
-    text-align:left;
+.skills-content{
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    height: auto;
+    /* perspective: 500px; */
 }
 
-.skillBar{
+.skills-logo{
+    perspective: 700px;
+    margin: 2rem 0;
     display: flex;
-    margin:1rem;
-    padding:1.5rem 2rem;
-    border-radius: 0.5rem;
-    background: rgb(50,50,50);
+    align-items: center;
+    justify-content: center;
 }
 
-.skillBarImg{
-    object-fit: cover;  
-    height: 3rem;  
-    width: 3rem;    
-    margin-right: 2rem;
+
+
+
+.skills-logo-container-pink,
+.skills-logo-container-blue,
+.skills-logo-container-purple{
+    cursor: pointer;
+    width: 7rem;
+    /* height: 7rem; */
+    padding: 1.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 7s infinite linear;
 }
 
-.skillBarText>p{
-    font-size: 0.9rem;
-    font-weight:200;
-} */
+.skills-logo-container-pink{
+    background-image: url('../../assets/ball/pink-ball.png'); 
+}
+.skills-logo-container-blue{
+    background-image: url('../../assets/ball/blue-ball.png');
+}
+.skills-logo-container-purple{
+    background-image: url('../../assets/ball/purple-ball.png');
+}
+
+@keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+
+
+
+
+
 
 @media screen and (max-width: 720px) {
     .skillBarText>p{
