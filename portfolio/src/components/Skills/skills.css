@@ -30,7 +30,7 @@
 
 .skills-logo{
     perspective: 700px;
-    margin: 2rem 0;
+    margin: 2rem 0 3rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +53,7 @@
     justify-content: center;
     align-items: center;
     animation: spin 7s infinite linear;
+    transform-style: preserve-3d; /* Ensures 3D transformations are rendered */
 }
 
 .skills-logo-container-pink{
@@ -65,16 +66,26 @@
     background-image: url('../../assets/ball/purple-ball.png');
 }
 
-@keyframes spin {
+/* @keyframes spin {
     from {
       transform: rotateY(0deg);
     }
     to {
       transform: rotateY(360deg);
     }
-  }
+  } */
 
-
+  @keyframes spin {
+    0% {
+        transform: rotateY(0deg) translateZ(0);
+    }
+    50% {
+        transform: rotateY(180deg) translateZ(1rem); /* Moves the image outwards at half rotation */
+    }
+    100% {
+        transform: rotateY(360deg) translateZ(0); /* Returns to the original position */
+    }
+}
 
 
 

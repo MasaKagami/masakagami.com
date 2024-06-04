@@ -58,46 +58,7 @@ const Skills = () => {
           <img className='skills-logo-container-blue' src={Numpy} alt='NumPy'/>
           <img className='skills-logo-container-blue' src={Pandas} alt='Pandas'/>
         </div>
-      </body>
-      
-
-        {/* <span className='skillTitle'>About Me</span>
-        <span className='skillDescription'>I am a skilled and passionate....</span>
-        <div className='skills-content'>
-          <div className='skills-language'>
-            <h1>Programming Languages</h1>
-          </div>
-          <div className='skills-technologies'>
-            <h1>Web Technologies</h1>
-          </div>
-          <div className='skills-frameworks'>
-            <h1>Frameworks & Libraries</h1>
-          </div>
-          
-          <div className='skillBar'>
-            <img className='skills-logo-container' src={UIDesign} alt='' className="skillBarImg"/>
-            <div className='skillBarText'>
-              <h3>UI/UX Design</h3>
-              <p>THis is a demo text</p>
-            </div>
-          </div>
-          <div className='skillBar'>
-            <img className='skills-logo-container' src={WebDesign} alt='' className="skillBarImg"/>
-            <div className='skillBarText'>
-            <h3>Website Design</h3>
-              <p>THis is a demo text</p>
-            </div>
-          </div>
-          <div className='skillBar'>
-            <img className='skills-logo-container' src={AppDesign} alt='' className="skillBarImg"/>
-            <div className='skillBarText'>
-            <h3>App Design</h3>
-              <p>THis is a demo text</p>
-            </div>
-          </div>
-        </div> */}
-
-        
+      </body>  
     </section>
   )
 }
