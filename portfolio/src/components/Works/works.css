@@ -19,3 +19,15 @@
 .works-header h1{
     margin: .5rem 0;
 }
+
+.works-content{
+    width: 100%;
+    max-width: 70rem;
+    border: 2px #c7c7c7 solid;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.works-content h2{
+    padding: 1rem 0;
+}

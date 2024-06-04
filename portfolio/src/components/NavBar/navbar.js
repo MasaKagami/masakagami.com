@@ -12,10 +12,10 @@ const Navbar = () => {
               <spam>Masa Kagami</spam>
             </div>
             <div className="desktopMenu">
-              <Link to="intro" spy={true} smooth={true} offset={50} duration={500} className="desktopMenuListItem">Home</Link>
-              <Link to="/" spy={true} smooth={true} offset={50} duration={500} className="desktopMenuListItem">About</Link>
-              <Link to="skills" spy={true} smooth={true} offset={50} duration={500} className="desktopMenuListItem">Skills</Link>
-              <Link to="works" spy={true} smooth={true} offset={50} duration={500} className="desktopMenuListItem">Portfolio</Link>
+              <Link to="/" spy={true} smooth={true} offset={-80} duration={500} className="desktopMenuListItem">Home</Link>
+              <Link to="intro" spy={true} smooth={true} offset={-80} duration={500} className="desktopMenuListItem">About</Link>
+              <Link to="skills" spy={true} smooth={true} offset={-80} duration={500} className="desktopMenuListItem">Skills</Link>
+              <Link to="works" spy={true} smooth={true} offset={-80} duration={500} className="desktopMenuListItem">Portfolio</Link>
             </div>
             <button className="desktopMenuBtn">
               <img src={contactImg} alt="contactImage" className="desktopMenuImg" />Contact Me</button>

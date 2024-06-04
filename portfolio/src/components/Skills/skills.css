@@ -36,15 +36,11 @@
     justify-content: center;
 }
 
-
-
-
 .skills-logo-container-pink,
 .skills-logo-container-blue,
 .skills-logo-container-purple{
     cursor: pointer;
     width: 7rem;
-    /* height: 7rem; */
     padding: 1.5rem;
     background-size: contain;
     background-repeat: no-repeat;
@@ -53,7 +49,7 @@
     justify-content: center;
     align-items: center;
     animation: spin 7s infinite linear;
-    transform-style: preserve-3d; /* Ensures 3D transformations are rendered */
+    transform-style: preserve-3d;
 }
 
 .skills-logo-container-pink{
@@ -86,9 +82,6 @@
         transform: rotateY(360deg) translateZ(0); /* Returns to the original position */
     }
 }
-
-
-
 
 
 @media screen and (max-width: 720px) {
