@@ -4,9 +4,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     overflow: hidden;
-    margin: hidden ;
+    margin:0;
 }
 
 .works-header{
@@ -20,28 +20,86 @@
     margin: .5rem 0;
 }
 
-.works-content{
+.works-display-header-budgetr,
+.works-display-header-portfolio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem 1rem 1rem;
     width: 100%;
     max-width: 70rem;
     border: 2px #c7c7c7 solid;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+.works-content-budgetr,
+.works-content-portfolio{
+    width: 100%;
+    max-width: 70rem;
+    height: 100%;
+    border-radius: 5px;
+    border: #c7c7c7 2px solid;
     padding: 1rem;
-}
-
-.works-content h2{
-    padding: 1rem 0;
-}
-
-.works-budgetr-content{
-    display: flex;
-    width: 100%;   
-}
-
-.works-budgetr-content p{
-    margin-right: 1rem;
+    display: none;
 }
 
 .works-display{
-    overflow: hidden;
+    width: 40%;
+    object-fit: cover;
+    margin-left: 1rem;
+}
+
+.works-content-container{
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.works-content-title{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 0;
+    align-items: center;
+}
+
+.works-content p{
+    width: 100%;
+    text-align:justify;
+}
+
+.works-content-title img{
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    margin-left:none;
+    cursor:cell;
+    transition: transform 0.3s ease;  
+    display: block;
+}
+.works-content-title img:hover{
+    transform: scale(1.1);     
+}
+
+.works-tech-logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: flex-end;
+    margin:0;
+    padding:0;
+}
+
+.works-tech-logo img{
+    height: 2rem;
+    margin: .5rem .5rem;
+}
+
+.down-arrow{
+    transform: rotate(.75turn);
+    font-size: 1.3rem;
+    font-weight: 400;
 }

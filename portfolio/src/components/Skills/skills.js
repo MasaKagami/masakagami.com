@@ -16,14 +16,6 @@ import Postgresql from '../../assets/coding-logo/postgresql.png';
 import Numpy from '../../assets/coding-logo/numpy.png';
 import Pandas from '../../assets/coding-logo/pandas.png';
 
-import purpleBall from '../../assets/ball/purple-ball.png';
-import BlueBall from '../../assets/ball/blue-ball.png';
-import PurpleBall from '../../assets/ball/blue-ball.png';
-
-
-import UIDesign from '../../assets/ui-design.png';
-import WebDesign from '../../assets/website-design.png';
-import AppDesign from '../../assets/app-design.png';
 import GitHubWhite from '../../assets/logos/github-white.png';
 
 const Skills = () => {
