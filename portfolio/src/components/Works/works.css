@@ -31,3 +31,17 @@
 .works-content h2{
     padding: 1rem 0;
 }
+
+.works-budgetr-content{
+    display: flex;
+    width: 100%;   
+}
+
+.works-budgetr-content p{
+    margin-right: 1rem;
+}
+
+.works-display{
+    overflow: hidden;
+    width: 100%;
+}
