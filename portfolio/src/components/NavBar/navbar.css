@@ -73,8 +73,10 @@
 
 @media screen and (max-width: 768px){
 
+
     .navbar{
         width: 100vw;
+        overflow-x: hidden;
     }
     .navbar-logo-name{
         width: 9rem;

@@ -85,21 +85,8 @@
 }
 
 
-@media screen and (max-width: 720px) {
-    .skillBarText>p{
-        font-size: 2vw;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .skillBarText>p{
-        font-size: 3vw;
-    }
-    .skillBarImg{
-        height: 2.25rem;
-        width: 2.25rem;
-    }
-    .skillBarText{
-        font-size: 5vw;
+@media screen and (max-width: 768px){
+    #skills{
+        overflow-x: hidden;
     }
 }

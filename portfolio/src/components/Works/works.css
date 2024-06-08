@@ -109,3 +109,9 @@
     font-size: 1.3rem;
     font-weight: 400;
 }
+
+@media screen and (max-width: 768px){
+    #works{
+        overflow-x: hidden;
+    }
+}

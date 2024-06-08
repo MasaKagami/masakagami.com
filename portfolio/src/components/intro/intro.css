@@ -445,15 +445,13 @@
 
 
 
-
-
 @media screen and (max-width: 768px){
     #intro{
-        /* background-color: pink; */
+        overflow-x: hidden;
     }
     .intro-photo{
         position:absolute;
-        top:10rem;
+        top:12rem;
         right: -12rem;
         z-index: -1;
         object-fit: cover;
@@ -485,7 +483,7 @@
     
     .intro-content-body{
         width:58%;
-        margin-top: -22rem;
+        margin-top: -15rem;
     }
 
     .intro-button{
