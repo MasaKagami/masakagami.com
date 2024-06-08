@@ -7,6 +7,7 @@ import Javascript from '../../assets/coding-logo/javascript.png';
 import Css from '../../assets/coding-logo/css.png';
 import Html from '../../assets/coding-logo/html.png';
 import Python from '../../assets/coding-logo/python.png';
+import Postgresql from '../../assets/coding-logo/postgresql.png';
 
 
 const Works = () => { 
@@ -27,8 +28,8 @@ const Works = () => {
                 </div>
                 <p>Budgetr. is an intuitive financial dashboard that allows users to manage their expenses and budgets effectively. It features interactive charts for tracking spending trends, budget comparisons, and categorization of expenses. This tool is designed to provide clear insights into personal financial habits, helping users optimize their financial decisions.</p>
                 <div className="works-tech-logo">
-                    <img src={Python}/>
-                    <img src={Javascript} alt='javascript'/>
+                    <img src={Python} alt='python'/>
+                    <img src={Postgresql} alt='sql'/>
                     <img src={Html} alt='html'/>
                     <img src={Css} alt='css'/>
                 </div>
@@ -44,7 +45,7 @@ const Works = () => {
                         <img src={GitHubWhite} alt='GitHub'/>
                     </a>
                 </div>
-                <p>This very website that you are currently on.</p>
+                <p>This website that you are currently on.</p>
                 <div className="works-tech-logo">
                     <img src={Reactt} alt='react'/>
                     <img src={Javascript} alt='javascript'/>
