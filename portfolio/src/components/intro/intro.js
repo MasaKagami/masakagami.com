@@ -57,7 +57,7 @@ const Intro = () => {
         <div className='intro-content-body'>
           <span className='intro-text-intro'>Hello, I am</span>
           <span className='intro-text-name'>Masa.</span>
-          <span className='intro-text-sub'>Electrical Engineering Student @ McGill University</span>
+          <span className='intro-text-sub'>Electrical Engineering Student <br/>@ McGill University</span>
         </div>  
         <div className='intro-content-link'>
           <a href='https://drive.google.com/file/d/1NuqJCTqpLSB00BaQTAoyb5Wh4cb1jWOO/view' target='_blank' rel='noopener noreferrer'>
