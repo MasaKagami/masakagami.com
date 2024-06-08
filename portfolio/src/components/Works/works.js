@@ -3,6 +3,7 @@ import './works.css';
 import Budgetr from '../../assets/example.png';
 import MasaKagamiPreview from '../../assets/masakagami.com-preview.png';
 
+import External from '../../assets/external.png';
 import GitHubWhite from '../../assets/logos/github-white.png';
 import Reactt from '../../assets/coding-logo/react.png';
 import Javascript from '../../assets/coding-logo/javascript.png';
@@ -24,9 +25,15 @@ const Works = () => {
             <div className="works-content">
                 <div className="works-content-title">
                     <h2>Budgetr.</h2>
-                    <a href='https://github.com/MasaKagami/Finance-Dashboard' alt='github' target="_blank" rel="noopener noreferrer">
-                        <img src={GitHubWhite} alt='GitHub'/>
-                    </a>
+                    <div className='works-content-title-icon'>
+                        <a href='https://github.com/MasaKagami/Finance-Dashboard' alt='github' target="_blank" rel="noopener noreferrer">
+                            <img src={External} alt='External'/>
+                        </a>                                    
+                        <a href='https://github.com/MasaKagami/Finance-Dashboard' alt='github' target="_blank" rel="noopener noreferrer">
+                            <img src={GitHubWhite} alt='GitHub'/>
+                        </a>                        
+                    </div>
+
                 </div>
                 <p>Budgetr. is an intuitive financial dashboard that allows users to manage their expenses and budgets effectively. It features interactive charts for tracking spending trends, budget comparisons, and categorization of expenses. This tool is designed to provide clear insights into personal financial habits, helping users optimize their financial decisions.</p>
                 <div className="works-tech-logo">
@@ -43,9 +50,14 @@ const Works = () => {
             <div className="works-content">
                 <div className="works-content-title">
                     <h2>My Portfolio Page</h2>
-                    <a href='https://github.com/MasaKagami/masakagami.com' alt='github' target="_blank" rel="noopener noreferrer">
-                        <img src={GitHubWhite} alt='GitHub'/>
-                    </a>
+                    <div className='works-content-title-icon'>
+                        <a href='https://masakagami.com' alt='github' target="_blank" rel="noopener noreferrer">
+                            <img src={External} alt='External'/>
+                        </a>                                    
+                        <a href='https://github.com/MasaKagami/masakagami.com' alt='github' target="_blank" rel="noopener noreferrer">
+                            <img src={GitHubWhite} alt='GitHub'/>
+                        </a>                        
+                    </div>
                 </div>
                 <p>This website that you are currently on.</p>
                 <div className="works-tech-logo">

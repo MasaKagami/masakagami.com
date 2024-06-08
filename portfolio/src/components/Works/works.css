@@ -61,6 +61,15 @@
     align-items: center;
 }
 
+.works-content-title-icon{
+    display: flex;
+    margin:0;
+}
+
+.works-content-title-icon img{
+    margin-left: 1rem;
+}
+
 .works-content-container p{
     width: 100%;
     text-align:justify;
@@ -71,7 +80,7 @@
     height: 2rem;
     object-fit: cover;
     margin-left:none;
-    cursor:cell;
+    cursor:pointer;
     transition: transform 0.3s ease;  
     display: block;
 }
