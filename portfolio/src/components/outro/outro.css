@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: center;
     margin:0;
-    /* margin-bottom: 2rem; */
 }
 
 .outro-header{
@@ -21,8 +20,7 @@
     display: flex;
     width: 100%;
     max-width: 70rem;
-    margin: 2rem auto;
-    margin-bottom: 4rem;
+    margin: 2rem 0 0 0;
     height: auto;
     overflow: hidden;
 }
@@ -68,18 +66,19 @@
 }
 
 .outro-button{
-    margin-left: 5rem;
+    margin-left: 8rem;
+    margin-bottom: -8rem;
     width: auto;
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease;
     display: inline-block;
     overflow: visible;
-    padding:10px;
+    padding:13px;
 }
 
 .outro-button img{
-    width: 15rem;
+    width: 8rem;
     transition: transform 0.2s ease;
     display: block;         /* Ensures the image scales from its center */
     margin: auto;           /* Centers the image in the button */

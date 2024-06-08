@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './outro.css';
-import MusicButton from '../../assets/music-button.png';
+import MusicButton from '../../assets/hand.png';
 import Arrow from '../../assets/arrow.png'
 import Arrow2 from '../../assets/arrow-2.png'
 import Arrow3 from '../../assets/arrow-3.png'
@@ -44,7 +44,7 @@ const Outro = () => {
       </div>
       <div className='outro-content-container'>
         <div className='outro-content'>
-          <p><br></br>I hope you've enjoyed my portfolio. Click the button to the right<br/> to listen to some music I've curated for you.</p>
+          <p><br></br>I hope you've enjoyed my portfolio. Click the icon to the right<br/> to listen to some music I've curated for you.</p>
           <img src={Arrow} alt='arrow' className='outro-arrow-1'/>
           <img src={Arrow2} alt='arrow 2' className='outro-arrow-2'/>
           <img src={Arrow3} alt='arrow 3' className='outro-arrow-3'/>
