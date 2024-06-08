@@ -1,6 +1,8 @@
 import React from 'react';
 import './works.css';
 import Budgetr from '../../assets/example.png';
+import MasaKagamiPreview from '../../assets/masakagami.com-preview.png';
+
 import GitHubWhite from '../../assets/logos/github-white.png';
 import Reactt from '../../assets/coding-logo/react.png';
 import Javascript from '../../assets/coding-logo/javascript.png';
@@ -53,7 +55,7 @@ const Works = () => {
                     <img src={Css} alt='css'/>
                 </div>
             </div>
-            <img src={Budgetr} alt='Budgetr.' className='works-display'/>
+            <img src={MasaKagamiPreview} alt='Budgetr.' className='works-display'/>
         </div>
     </section>
     )
