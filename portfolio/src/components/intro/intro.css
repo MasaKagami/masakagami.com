@@ -56,6 +56,7 @@
 .intro-button{
     background: #333333;
     margin: 1rem 0;
+    margin-right: 1rem;
     padding: 0.75rem 1.6rem;
     color:white;
     border:none;
@@ -82,7 +83,12 @@
     flex-direction: row;
     height: auto;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+}
+
+.intro-content-link-icon{
+    display: flex;
+    /* background-color: pink; */
 }
 
 .intro-content-link a{
@@ -96,6 +102,7 @@
     cursor:pointer;
     transition: transform 0.3s ease; 
     display: block;
+    margin: 0 1rem 0 0;
 }
 
 .intro-link-icons:hover{
