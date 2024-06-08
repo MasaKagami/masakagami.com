@@ -4,6 +4,7 @@ import Skills from "./components/Skills/skills";
 import Works from "./components/Works/works";
 import Outro from "./components/outro/outro"
 import Footer from "./components/Footer/footer";
+import MusicRedirect from "./MusicRedirect";
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
@@ -22,7 +23,7 @@ function App() {
               <Footer/>
             </>
           } />
-          <Route path="/music" element={<Navigate to="https://www.youtube.com/watch?v=ZJM4AQSbZDk&ab_channel=MuraMasaVEVO" replace />} />
+          <Route path="/music" element={<MusicRedirect />} />
         </Routes>
       </div>
     </Router>
