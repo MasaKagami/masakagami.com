@@ -59,7 +59,7 @@
     color:white;
     border:none;
     border-radius: 10px;
-    cursor: cell;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
@@ -71,7 +71,7 @@
     object-fit:cover;
     margin:0 0.25rem;
     height: 0.8rem;
-    cursor: cell;
+    cursor: pointer;
 }
 
 .intro-content-link{
@@ -92,7 +92,7 @@
 
 .intro-link-icons{
     height: 2rem;
-    cursor:cell;
+    cursor:pointer;
     transition: transform 0.3s ease;  /* Smooth transition for scaling */
     display: block;
 }

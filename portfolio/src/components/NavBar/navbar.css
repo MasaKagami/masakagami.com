@@ -27,7 +27,7 @@
 
 .desktopMenuListItem{
     margin: 1rem;
-    cursor: cell;
+    cursor: pointer;
 }
 
 .desktopMenuListItem:hover {
@@ -42,9 +42,12 @@
     border: none;
     display: flex;
     align-items: center;
-    cursor: cell;
+    cursor: pointer;
     padding: 0 1rem; /* adds space, 0 for top and 1rem for left and right */
+    padding-right: 2rem;
+    font-weight: 600;
     border-radius: 2rem;
+
 }
 
 .desktopMenuImg{
@@ -52,5 +55,5 @@
     height:1rem;
     width:1rem;
     margin: 1rem;
-    cursor: cell;
+    cursor: pointer;
 }
