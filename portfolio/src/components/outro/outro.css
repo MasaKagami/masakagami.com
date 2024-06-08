@@ -140,3 +140,11 @@
   .outro-german { color: #FFCC00; }
   .outro-spanish { color: #FFAC1C; }
   
+
+  @media screen and (max-width: 910px){
+    .outro-arrow-1,
+    .outro-arrow-2,
+    .outro-arrow-3{
+        display: none;
+    }
+}

@@ -57,3 +57,38 @@
     margin: 1rem;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 910px){
+    .desktopMenu, .desktopMenuBtn{
+        display: none;
+    }
+
+    .navbar{
+        width: 100%;
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+    .navbar{
+        width: 100vw;
+    }
+    .navbar-logo-name{
+        width: 9rem;
+        /* background-color: purple; */
+    }
+
+    .navbar-logo-name span{
+        font-size: .9rem;
+    }
+
+    .logo{
+        height:calc(2/4*3rem);
+        width:2rem;
+        /* background-color: pink; */
+    }
+    
+}

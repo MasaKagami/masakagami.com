@@ -65,15 +65,18 @@ const Intro = () => {
               <img src={btnImg} alt='file' className='intro-btnImg'/>View Resume
             </button>
           </a>
-          <a href='https://linkedin.com/in/nagamasa' target="_blank" rel="noopener noreferrer">
-              <img src={LinkedIn} alt='LinkedIn' className='intro-link-icons'/>
-          </a>
-          <a href='https://github.com/MasaKagami' alt='github' target="_blank" rel="noopener noreferrer">
-              <img src={GitHubWhite} alt='GitHub' className='intro-link-icons'/>
-          </a>
-          <a href='https://open.spotify.com/user/masa.kagami100?si=31c8282daceb4c41' target="_blank" rel="noopener noreferrer">
-              <img src={Spotify} alt='Spotify' className='intro-link-icons'/>
-          </a>
+          <div className='intro-content-link-icon'>
+            <a href='https://linkedin.com/in/nagamasa' target="_blank" rel="noopener noreferrer">
+                <img src={LinkedIn} alt='LinkedIn' className='intro-link-icons'/>
+            </a>
+            <a href='https://github.com/MasaKagami' alt='github' target="_blank" rel="noopener noreferrer">
+                <img src={GitHubWhite} alt='GitHub' className='intro-link-icons'/>
+            </a>
+            <a href='https://open.spotify.com/user/masa.kagami100?si=31c8282daceb4c41' target="_blank" rel="noopener noreferrer">
+                <img src={Spotify} alt='Spotify' className='intro-link-icons'/>
+            </a>
+          </div>
+
         </div>
         <div id="intro-typing">
             I am <span>{dynamicText}</span><span className="cursor">|</span>
