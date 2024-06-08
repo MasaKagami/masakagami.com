@@ -15,15 +15,8 @@ const Works = () => {
             <h1>Websites and Applications.</h1>
         </div>
         
-
-
-        {/* <div className="works-display-header-budgetr">
-                <h2>Budgetr.</h2>
-                <span className='down-arrow'>&lt;</span>
-        </div> */}
-
-        <div className="works-content-budgetr">
-            <div className="works-content-container">
+        <div className="works-content-container">
+            <div className="works-content">
                 <div className="works-content-title">
                     <h2>Budgetr.</h2>
                     <a href='https://github.com/MasaKagami/Finance-Dashboard' alt='github' target="_blank" rel="noopener noreferrer">
@@ -41,21 +34,15 @@ const Works = () => {
             <img src={Budgetr} alt='Budgetr.' className='works-display'/>
         </div>
         
-{/* 
-        <div className="works-display-header-portfolio">
-                <h2>My Portfolio Website</h2>
-                <span className='down-arrow'>&lt;</span>
-        </div> */}
-        
-        <div className="works-content-portfolio">
-            <div className="works-content-container">
+        <div className="works-content-container">
+            <div className="works-content">
                 <div className="works-content-title">
-                    <h2>Budgetr.</h2>
+                    <h2>My Portfolio Page</h2>
                     <a href='https://github.com/MasaKagami/masakagami.com' alt='github' target="_blank" rel="noopener noreferrer">
                         <img src={GitHubWhite} alt='GitHub'/>
                     </a>
                 </div>
-                <p>This very website that you are currently on :)</p>
+                <p>This very website that you are currently on.</p>
                 <div className="works-tech-logo">
                     <img src={Reactt} alt='react'/>
                     <img src={Javascript} alt='javascript'/>
@@ -64,8 +51,7 @@ const Works = () => {
                 </div>
             </div>
             <img src={Budgetr} alt='Budgetr.' className='works-display'/>
-        </div>    
-    
+        </div>
     </section>
     )
 }

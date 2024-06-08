@@ -31,17 +31,21 @@
     display: flex;
     flex-direction: column;
     margin-right: rem;
-}
-
-.outro-content{
     margin:0;
 }
+
+.outro-content P{
+    margin:0;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
 .outro-arrow-1{
     margin:0;
     position: absolute;
     width: 13%;
     margin-top:7rem;
-    margin-left:16rem;
+    margin-left:20rem;
     transform: rotate(0turn);
 }
 
@@ -50,7 +54,7 @@
     position: absolute;
     width: 4%;
     margin-top:-1rem;
-    margin-left:49rem;
+    margin-left:53rem;
     transform: rotate(-0.09turn);
 }
 
@@ -59,12 +63,12 @@
     position: absolute;
     width: 4%;
     margin-top:11rem;
-    margin-left:48rem;
+    margin-left:52rem;
     transform: rotate(0.1turn);
 }
 
 .outro-button{
-    margin-left: 2rem;
+    margin-left: 6rem;
     width: auto;
     height: auto;
     cursor: pointer;
