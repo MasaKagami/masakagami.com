@@ -68,14 +68,26 @@
 }
 
 .outro-button{
-    margin-left: 6rem;
+    margin-left: 5rem;
     width: auto;
     height: auto;
     cursor: pointer;
+    transition: transform 0.2s ease;
+    display: inline-block;
+    overflow: visible;
+    padding:10px;
 }
 
 .outro-button img{
     width: 15rem;
+    transition: transform 0.2s ease;
+    display: block;         /* Ensures the image scales from its center */
+    margin: auto;           /* Centers the image in the button */
+    transform-origin: center center; /* Ensures scaling happens from the center */
+}
+
+.outro-button img:hover{
+    transform: scale(1.1)
 }
 
 /* Styling for the Rotating Text */

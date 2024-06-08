@@ -6,6 +6,8 @@ import Reactt from '../../assets/coding-logo/react.png';
 import Javascript from '../../assets/coding-logo/javascript.png';
 import Css from '../../assets/coding-logo/css.png';
 import Html from '../../assets/coding-logo/html.png';
+import Python from '../../assets/coding-logo/python.png';
+
 
 const Works = () => { 
   return (
@@ -25,7 +27,7 @@ const Works = () => {
                 </div>
                 <p>Budgetr. is an intuitive financial dashboard that allows users to manage their expenses and budgets effectively. It features interactive charts for tracking spending trends, budget comparisons, and categorization of expenses. This tool is designed to provide clear insights into personal financial habits, helping users optimize their financial decisions.</p>
                 <div className="works-tech-logo">
-                    <img src={Reactt} alt='react'/>
+                    <img src={Python}/>
                     <img src={Javascript} alt='javascript'/>
                     <img src={Html} alt='html'/>
                     <img src={Css} alt='css'/>
