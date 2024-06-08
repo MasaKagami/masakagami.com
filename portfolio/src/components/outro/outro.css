@@ -1,4 +1,128 @@
 #outro{
+    overflow: hidden;
     width: 100vw;
-    height: 50vh;
+    height: calc(100vh-5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    /* margin-bottom: 2rem; */
 }
+
+.outro-header{
+    max-width: 70rem;
+    width: 100%;
+    align-items: left;
+    margin:0;
+}
+
+.outro-content-container{
+    display: flex;
+    width: 100%;
+    max-width: 70rem;
+    margin: 2rem auto;
+    margin-bottom: 4rem;
+    height: auto;
+    overflow: hidden;
+}
+
+.outro-content{
+    display: flex;
+    flex-direction: column;
+    margin-right: rem;
+}
+
+.outro-content{
+    margin:0;
+}
+.outro-arrow-1{
+    margin:0;
+    position: absolute;
+    width: 13%;
+    margin-top:7rem;
+    margin-left:16rem;
+    transform: rotate(0turn);
+}
+
+.outro-arrow-2{
+    margin:0;
+    position: absolute;
+    width: 4%;
+    margin-top:-1rem;
+    margin-left:49rem;
+    transform: rotate(-0.09turn);
+}
+
+.outro-arrow-3{
+    margin:0;
+    position: absolute;
+    width: 4%;
+    margin-top:11rem;
+    margin-left:48rem;
+    transform: rotate(0.1turn);
+}
+
+.outro-button{
+    margin-left: 2rem;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+.outro-button img{
+    width: 15rem;
+}
+
+
+/* Styling for the Rotating Text */
+@import url('https://fonts.googleapis.com/css?family=Lato:600');  /* Ensure proper URL syntax */
+
+.rotating-text {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;  /* Default text color, can be overridden by classes */
+    margin: .5rem 0;
+}
+
+.rotating-text p {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    min-height: 1.2rem;
+  }
+  
+  .word {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .word.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .word.hidden {
+    opacity: 0;
+    transform: translateY(-100%); /* Slide up on hide */
+  }
+  
+  .letter {
+    display: inline-block;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Specific Colors for Words */
+  .outro-japanese { color: #e74c3c; }
+  .outro-french { color: #8e44ad; }
+  .outro-italian { color: #3498db; }
+  .outro-portuguese { color: #046A38; }
+  .outro-english {color: #FFFDD0; }
+  .outro-german { color: #FFCC00; }
+  .outro-spanish { color: #FFAC1C; }
+  

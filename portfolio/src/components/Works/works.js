@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './works.css';
 import Budgetr from '../../assets/example.png';
 import GitHubWhite from '../../assets/logos/github-white.png';
@@ -8,12 +8,6 @@ import Css from '../../assets/coding-logo/css.png';
 import Html from '../../assets/coding-logo/html.png';
 
 const Works = () => { 
-    const [isContentVisible, setContentVisible] = useState(false);
-    
-    const toggleContentVisibility = () => {
-        setContentVisible(!isContentVisible);
-    };  
-
   return (
     <section id="works">
         <div className='works-header'>
@@ -23,11 +17,11 @@ const Works = () => {
         
 
 
-        <div className="works-display-header-budgetr" onClick={toggleContentVisibility}>
+        {/* <div className="works-display-header-budgetr">
                 <h2>Budgetr.</h2>
                 <span className='down-arrow'>&lt;</span>
-        </div>
-        {isContentVisible && (
+        </div> */}
+
         <div className="works-content-budgetr">
             <div className="works-content-container">
                 <div className="works-content-title">
@@ -46,12 +40,13 @@ const Works = () => {
             </div>
             <img src={Budgetr} alt='Budgetr.' className='works-display'/>
         </div>
-        )}
-
+        
+{/* 
         <div className="works-display-header-portfolio">
                 <h2>My Portfolio Website</h2>
                 <span className='down-arrow'>&lt;</span>
-        </div>
+        </div> */}
+        
         <div className="works-content-portfolio">
             <div className="works-content-container">
                 <div className="works-content-title">
