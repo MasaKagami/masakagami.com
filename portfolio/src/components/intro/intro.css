@@ -567,7 +567,7 @@
     }
 }
 
-@media screen and (width: 375px) and (height: 667px){
+@media screen and (width: 375px){
     .intro-content-body{
         width:70%;
         margin-top: -16rem;
@@ -598,7 +598,7 @@
 }
 
 
-@media screen and (width: 414px) and (height: 896px){
+@media screen and (width: 414px){
     .intro-content-body{
         width:70%;
         margin-top: -22rem;
@@ -628,7 +628,7 @@
     }
 }
 
-@media screen and (width: 430px) and (height: 932px){
+@media screen and (width: 430px){
     .intro-content-body{
         width:70%;
         margin-top: -23rem;
@@ -658,7 +658,7 @@
     }
 }
 
-@media screen and (width: 768px) and (height: 1024px){
+@media screen and (width: 768px){
     .intro-photo{
         position:absolute;
         top:22rem;

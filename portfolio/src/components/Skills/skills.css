@@ -121,7 +121,7 @@
     }
 }
 
-@media screen and (min-width: 770px) and (max-width: 870px){
+@media screen and (width: 820px){
     #skills{
         overflow-x: hidden;
         margin: 1rem 0;
@@ -158,7 +158,7 @@
     }
 }
 
-@media screen and (width: 1024px) and (height: 1366px){
+@media screen and (width: 1024px){
     #skills{
         overflow-x: hidden;
         margin: 1rem 0;

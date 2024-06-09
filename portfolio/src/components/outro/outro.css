@@ -216,7 +216,7 @@
         transform-origin: center center; /* Ensures scaling happens from the center */
     }
 }
-@media screen and (width: 768px) and (height: 1024px){
+@media screen and (width: 768px){
     .outro-button{
         margin-left: 6rem;
         margin-bottom: -11rem;
@@ -249,7 +249,7 @@
 
 }
 
-@media screen and (min-width: 770px) and (max-width: 870px){
+@media screen and (width: 820px){
     #outro{
         overflow-x: hidden;
     }
@@ -314,7 +314,7 @@
     }
 }
 
-@media screen and (width: 1024px) and (height: 1366px){
+@media screen and (width: 1024px){
     #outro{
         overflow-x: hidden;
     }
