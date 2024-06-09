@@ -73,8 +73,8 @@
 
 @media screen and (max-width: 768px){
 
-
     .navbar{
+        height: 3rem;
         width: 100vw;
         overflow-x: hidden;
     }
