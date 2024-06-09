@@ -700,7 +700,7 @@
     }
 }
 
-@media screen and (min-width: 770px) and (max-width: 870px){
+@media screen and (width: 820px){
     .intro-photo{
         position:absolute;
         top:24rem;
@@ -752,7 +752,7 @@
     }
 }
 
-@media screen and (width: 1024px) and (height: 1366px){
+@media screen and (width: 1024px){
     .intro-photo{
         position:absolute;
         top:28rem;
