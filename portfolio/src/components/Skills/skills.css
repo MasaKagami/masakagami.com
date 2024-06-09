@@ -121,7 +121,7 @@
     }
 }
 
-@media screen and (width: 820px) and (height: 1180px){
+@media screen and (min-width: 770px) and (max-width: 870px){
     #skills{
         overflow-x: hidden;
         margin: 1rem 0;

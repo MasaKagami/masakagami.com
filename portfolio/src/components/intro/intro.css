@@ -700,7 +700,7 @@
     }
 }
 
-@media screen and (width: 820px) and (height: 1180px){
+@media screen and (min-width: 770px) and (max-width: 870px){
     .intro-photo{
         position:absolute;
         top:24rem;
