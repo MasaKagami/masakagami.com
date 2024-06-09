@@ -120,3 +120,77 @@
         margin: 0.2rem 0;
     }
 }
+
+@media screen and (width: 820px) and (height: 1180px){
+    #skills{
+        overflow-x: hidden;
+        margin: 1rem 0;
+    }
+
+    .skills-logo{
+        margin: 2rem 0 3rem 0;
+    }
+
+    .skills-logo-container-pink,
+    .skills-logo-container-blue,
+    .skills-logo-container-purple{
+        width: 6rem;
+        padding: 1.2rem;
+        margin: 0 0.8rem;
+    }
+    .skills-header{
+        max-width: 90vw;
+    }
+    .skills-content{
+        width: 100%;
+        max-width: 90vw;
+        margin: 0 auto;
+        height: auto;
+        overflow: hidden;
+    }
+    .skills-header h1{
+        font-size: 2rem;
+        margin: 0.2rem 0;
+    }
+    .skills-header h2{
+        font-size: 1rem;
+        margin: 0.2rem 0;
+    }
+}
+
+@media screen and (width: 1024px) and (height: 1366px){
+    #skills{
+        overflow-x: hidden;
+        margin: 1rem 0;
+    }
+
+    .skills-logo{
+        margin: 2rem 0 3rem 0;
+    }
+
+    .skills-logo-container-pink,
+    .skills-logo-container-blue,
+    .skills-logo-container-purple{
+        width: 7.5rem;
+        padding: 1.2rem;
+        margin: 0 1rem;
+    }
+    .skills-header{
+        max-width: 90vw;
+    }
+    .skills-content{
+        width: 100%;
+        max-width: 90vw;
+        margin: 0 auto;
+        height: auto;
+        overflow: hidden;
+    }
+    .skills-header h1{
+        font-size: 4rem;
+        margin: 0.2rem 0;
+    }
+    .skills-header h2{
+        font-size: 2rem;
+        margin: 0.2rem 0;
+    }
+}

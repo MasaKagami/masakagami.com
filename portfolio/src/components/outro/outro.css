@@ -144,7 +144,7 @@
   .outro-spanish { color: #FFAC1C; }
   
 
-  @media screen and (max-width: 910px){
+@media screen and (max-width: 910px){
     .outro-arrow-1,
     .outro-arrow-2,
     .outro-arrow-3{
@@ -215,4 +215,194 @@
         margin: auto;           /* Centers the image in the button */
         transform-origin: center center; /* Ensures scaling happens from the center */
     }
+}
+@media screen and (width: 768px) and (height: 1024px){
+    .outro-button{
+        margin-left: 6rem;
+        margin-bottom: -11rem;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        display: inline-block;
+        overflow: visible;
+        padding:13px;
+    }
+
+    .show-text{
+        display: none;
+    }
+
+    .hidden-text{
+        display: none;
+        width: 18rem;
+        /* background-color: purple; */
+    }
+
+    .hidden-text-container P{
+    
+        /* background-color: pink; */
+        text-align: left;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (width: 820px) and (height: 1180px){
+    #outro{
+        overflow-x: hidden;
+    }
+
+        
+    .outro-header{
+        max-width: 90vw;
+        width: 100%;
+        align-items: left;
+        margin:0;
+    }
+
+    .outro-header h1{
+        font-size: 2rem;
+    }
+
+    .outro-content-container{
+        display: flex;
+        width: 100%;
+        max-width: 90vw;
+        margin: 2rem 0 0 0;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .show-text{
+        display: none;
+    }
+    .hidden-text{
+        /* margin-top: 8rem; */
+        display: flex;
+        width: 20rem;
+        /* background-color: purple; */
+    }
+
+    .hidden-text-container P{
+        margin-top: 2rem;
+        /* background-color: pink; */
+        text-align: left;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+
+    .outro-button{
+        margin-left: 6rem;
+        margin-bottom: -11rem;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        display: inline-block;
+        overflow: visible;
+        padding:13px;
+    }
+    
+    .outro-button img{
+        width: 9rem;
+        transition: transform 0.2s ease;
+        display: block;         /* Ensures the image scales from its center */
+        margin: auto;           /* Centers the image in the button */
+        transform-origin: center center; /* Ensures scaling happens from the center */
+    }
+}
+
+@media screen and (width: 1024px) and (height: 1366px){
+    #outro{
+        overflow-x: hidden;
+    }
+
+        
+    .outro-header{
+        max-width: 90vw;
+        width: 100%;
+        align-items: left;
+        margin:0;
+    }
+
+    .outro-header h1{
+        font-size: 2rem;
+    }
+
+    .outro-content-container{
+        display: flex;
+        width: 100%;
+        max-width: 90vw;
+        margin: 2rem 0 0 0;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .show-text{
+        display: none;
+    }
+    .hidden-text{
+        /* margin-top: 8rem; */
+        display: flex;
+        width: 30rem;
+        /* background-color: purple; */
+    }
+
+    .hidden-text-container P{
+        margin-top: 2rem;
+        /* background-color: pink; */
+        text-align: left;
+        font-weight: 300;
+        font-size: 1.4rem;
+    }
+
+    .outro-button{
+        margin-left: 6rem;
+        margin-bottom: -9rem;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        display: inline-block;
+        overflow: visible;
+        padding:13px;
+    }
+    
+    .outro-button img{
+        width: 9rem;
+        transition: transform 0.2s ease;
+        display: block;         /* Ensures the image scales from its center */
+        margin: auto;           /* Centers the image in the button */
+        transform-origin: center center; /* Ensures scaling happens from the center */
+    }
+
+    .outro-arrow-1{
+        margin:0;
+        position: absolute;
+        width: 22%;
+        margin-top:12rem;
+        margin-left:18rem;
+        transform: rotate(0turn);
+    }
+    
+    .outro-arrow-2{
+        margin:0;
+        position: absolute;
+        width: 12%;
+        margin-top:-3rem;
+        margin-left:49rem;
+        transform: rotate(-0.09turn);
+    }
+    
+    .outro-arrow-3{
+        margin:0;
+        position: absolute;
+        width: 12%;
+        margin-top:13rem;
+        margin-left:48rem;
+        transform: rotate(0.1turn);
+    }
+    
 }
