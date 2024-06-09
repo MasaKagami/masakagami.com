@@ -10,7 +10,7 @@
 }
 
 .skills-header{
-    max-width: 70rem;
+    max-width: 59vw;
     width: 100%;
     align-items: left;
     margin:0;
@@ -22,7 +22,7 @@
 
 .skills-content{
     width: 100%;
-    max-width: 70rem;
+    max-width: 59vw;
     margin: 0 auto;
     height: auto;
     overflow: hidden;

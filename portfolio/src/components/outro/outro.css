@@ -10,7 +10,7 @@
 }
 
 .outro-header{
-    max-width: 70rem;
+    max-width: 59vw;
     width: 100%;
     align-items: left;
     margin:0;
@@ -19,7 +19,7 @@
 .outro-content-container{
     display: flex;
     width: 100%;
-    max-width: 70rem;
+    max-width: 59vw;
     margin: 2rem 0 0 0;
     height: auto;
     overflow: hidden;
