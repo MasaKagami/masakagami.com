@@ -44,7 +44,10 @@ const Outro = () => {
       </div>
       <div className='outro-content-container'>
         <div className='outro-content'>
-          <p><br></br>I hope you've enjoyed my portfolio. Click the icon to the right<br/> to listen to some music I've curated for you.<br/> *Try clicking more than once*</p>
+          <p className= 'show-text'><br/>I hope you've enjoyed my portfolio. Click the icon to the right<br/> to listen to some music I've curated for you.<br/> *Try clicking more than once*</p>
+          <div className='hidden-text-container'>
+            <p className='hidden-text'>I hope you've enjoyed my portfolio. Click the icon to the right<br/> to listen to some music I've curated for you. *Try clicking more than once*</p>
+          </div>
           <img src={Arrow} alt='arrow' className='outro-arrow-1'/>
           <img src={Arrow2} alt='arrow 2' className='outro-arrow-2'/>
           <img src={Arrow3} alt='arrow 3' className='outro-arrow-3'/>

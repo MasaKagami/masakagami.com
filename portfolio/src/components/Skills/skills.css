@@ -26,7 +26,6 @@
     margin: 0 auto;
     height: auto;
     overflow: hidden;
-    /* perspective: 500px; */
 }
 
 .skills-logo{
@@ -88,5 +87,32 @@
 @media screen and (max-width: 768px){
     #skills{
         overflow-x: hidden;
+        margin: 1rem 0;
+    }
+
+    .skills-logo-container-pink,
+    .skills-logo-container-blue,
+    .skills-logo-container-purple{
+        width: 3rem;
+        padding: .5rem;
+        margin: 0 0.2rem;
+    }
+    .skills-header{
+        max-width: 90vw;
+    }
+    .skills-content{
+        width: 100%;
+        max-width: 90vw;
+        margin: 0 auto;
+        height: auto;
+        overflow: hidden;
+    }
+    .skills-header h1{
+        font-size: 2rem;
+        margin: 0.2rem 0;
+    }
+    .skills-header h2{
+        font-size: 1rem;
+        margin: 0.2rem 0;
     }
 }

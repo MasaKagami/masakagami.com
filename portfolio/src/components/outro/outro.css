@@ -89,6 +89,9 @@
     transform: scale(1.1)
 }
 
+.hidden-text{
+    display: none;
+}
 /* Styling for the Rotating Text */
 @import url('https://fonts.googleapis.com/css?family=Lato:600');  /* Ensure proper URL syntax */
 
@@ -153,5 +156,63 @@
 @media screen and (max-width: 768px){
     #outro{
         overflow-x: hidden;
+    }
+
+        
+    .outro-header{
+        max-width: 90vw;
+        width: 100%;
+        align-items: left;
+        margin:0;
+    }
+
+    .outro-header h1{
+        font-size: 2rem;
+    }
+
+    .outro-content-container{
+        display: flex;
+        width: 100%;
+        max-width: 90vw;
+        margin: 2rem 0 0 0;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .show-text{
+        display: none;
+    }
+    .hidden-text{
+        display: flex;
+        width: 10rem;
+        /* background-color: purple; */
+    }
+
+    .hidden-text-container P{
+    
+        /* background-color: pink; */
+        text-align: left;
+        font-weight: 300;
+        font-size: .9rem;
+    }
+    
+    .outro-button{
+        margin-left: 2rem;
+        margin-bottom: -11rem;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        display: inline-block;
+        overflow: visible;
+        padding:13px;
+    }
+    
+    .outro-button img{
+        width: 8rem;
+        transition: transform 0.2s ease;
+        display: block;         /* Ensures the image scales from its center */
+        margin: auto;           /* Centers the image in the button */
+        transform-origin: center center; /* Ensures scaling happens from the center */
     }
 }
