@@ -60,7 +60,7 @@ const Intro = () => {
           <span className='intro-text-sub'>Electrical Engineering Student <br/>@ McGill University</span>
         </div>  
         <div className='intro-content-link'>
-          <a href='https://drive.google.com/file/d/1NuqJCTqpLSB00BaQTAoyb5Wh4cb1jWOO/view' target='_blank' rel='noopener noreferrer'>
+          <a href='https://drive.google.com/file/d/1TWgmllHsaYOVqUt76gWFdp51NIN5gf8n/view' target='_blank' rel='noopener noreferrer'>
             <button className='intro-button'>
               <img src={btnImg} alt='file' className='intro-btnImg'/>View Resume
             </button>
