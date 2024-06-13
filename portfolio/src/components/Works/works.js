@@ -26,7 +26,7 @@ const Works = () => {
                 <div className="works-content-title">
                     <h2>Budgetr.</h2>
                     <div className='works-content-title-icon'>
-                        <a href='https://github.com/MasaKagami/Finance-Dashboard' alt='github' target="_blank" rel="noopener noreferrer">
+                        <a href='https://myfinanceplanner.onrender.com/' alt='github' target="_blank" rel="noopener noreferrer">
                             <img src={External} alt='External'/>
                         </a>                                    
                         <a href='https://github.com/MasaKagami/Finance-Dashboard' alt='github' target="_blank" rel="noopener noreferrer">
