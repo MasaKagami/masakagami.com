@@ -5,6 +5,8 @@ import Works from "./components/Works/works";
 import Outro from "./components/outro/outro"
 import Footer from "./components/Footer/footer";
 import MusicRedirect from "./MusicRedirect";
+import BudgetrRedirect from "./BudgetrRedirect"
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
@@ -24,6 +26,7 @@ function App() {
             </>
           } />
           <Route path="/music" element={<MusicRedirect />} />
+          <Route path="/budgetr" element={<BudgetrRedirect />} />
         </Routes>
       </div>
     </Router>
