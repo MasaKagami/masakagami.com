@@ -4,10 +4,6 @@ import bg from '../../assets/masa.png';
 import Spotify from '../../assets/logos/spotify.png';
 import LinkedIn from '../../assets/logos/linkedin.png';
 import GitHubWhite from '../../assets/logos/github-white.png';
-import GitHubBlack from '../../assets/logos/github-black.png';
-import InstagramWhite from '../../assets/logos/instagram-white.png';
-
-import { Link } from 'react-scroll';
 import btnImg from '../../assets/file.png';
 
 const Intro = () => {
