@@ -59,11 +59,12 @@ const Intro = () => {
           <span className='intro-text-name'>Masa.</span>
           <span className='intro-text-sub'>Electrical Engineering Student <br/>@ McGill University</span>
         </div>  
-        <div className='intro-content-link'>
-          <a href='https://drive.google.com/file/d/1TWgmllHsaYOVqUt76gWFdp51NIN5gf8n/view' target='_blank' rel='noopener noreferrer'>
-            <button className='intro-button'>
-              <img src={btnImg} alt='file' className='intro-btnImg'/>View Resume
-            </button>
+        <div className='intro-content-link flex gap-2'>
+          <a href='https://drive.google.com/file/d/1sosYkn75xkXA1jrF-NSlTRe6SjswzQPP/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
+            <div className='btn flex border rounded-lg items-center py-2 px-2 gap-1'>
+              <img src={btnImg} alt='file' className='intro-btnImg'/>
+              <p className='text-sm'>View Resume</p>
+            </div>
           </a>
           <div className='intro-content-link-icon'>
             <a href='https://linkedin.com/in/nagamasa' target="_blank" rel="noopener noreferrer">

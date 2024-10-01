@@ -44,7 +44,7 @@
     padding: 1.5rem;
     background-size: contain;
     background-repeat: no-repeat;
-    margin: 0 2rem;
+    /* margin: 0 2rem; */
     display: flex;
     justify-content: center;
     align-items: center;
