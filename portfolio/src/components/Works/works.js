@@ -1,7 +1,6 @@
 import React from 'react';
-// import './works.css';
 import Budgetr from '../../assets/budgetr.png';
-import Empor from '../../assets/Empor.png';
+import Empor from '../../assets/empor.png';
 import MasaKagamiPreview from '../../assets/masakagami.png';
 
 
