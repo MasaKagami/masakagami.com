@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import './intro.css';
 import masa from '../../assets/masa_resize.png';
 import Spotify from '../../assets/logos/spotify.png';
 import LinkedIn from '../../assets/logos/linkedin.png';
@@ -12,7 +11,7 @@ const Intro = () => {
     "a Brother.",
     "a Software Enthusiast.",
     "a Food Connoisseur.",
-    "Town Hall Level 9."];
+    "Town Hall Level 12."];
   const [dynamicText, setDynamicText] = useState('');
   const [currentPhrase, setCurrentPhrase] = useState(0);
   const [currentLetter, setCurrentLetter] = useState(0);
@@ -93,43 +92,6 @@ const Intro = () => {
         </div>
       </div>
     </section>
-
-     
-
-      // </div>
-      // <div className='intro-content'>
-      //   <div className='intro-content-body'>
-      //     <span className='intro-text-intro'>Hello, I am</span>
-      //     <span className='intro-text-name'>Masa.</span>
-      //     <span className='intro-text-sub'>Electrical Engineering Student <br/>@ McGill University</span>
-      //   </div>  
-      //   <div className='intro-content-link flex gap-2'>
-      //     <a href='https://drive.google.com/file/d/1sosYkn75xkXA1jrF-NSlTRe6SjswzQPP/view?usp=sharing' target='_blank' rel='noopener noreferrer'>
-      //       <div className='btn flex border rounded-lg items-center py-2 px-2 gap-1'>
-      //         <img src={btnImg} alt='file' className='intro-btnImg'/>
-      //         <p className='text-sm whitespace-nowrap'>View Resume</p>
-      //       </div>
-      //     </a>
-      //     <div className='intro-content-link-icon'>
-      //       <a href='https://linkedin.com/in/nagamasa' target="_blank" rel="noopener noreferrer">
-      //           <img src={LinkedIn} alt='LinkedIn' className='intro-link-icons'/>
-      //       </a>
-      //       <a href='https://github.com/MasaKagami' alt='github' target="_blank" rel="noopener noreferrer">
-      //           <img src={GitHubWhite} alt='GitHub' className='intro-link-icons'/>
-      //       </a>
-      //       <a href='https://open.spotify.com/user/masa.kagami100?si=31c8282daceb4c41' target="_blank" rel="noopener noreferrer">
-      //           <img src={Spotify} alt='Spotify' className='intro-link-icons'/>
-      //       </a>
-      //     </div>
-
-      //   </div>
-      //   <div id="intro-typing">
-      //       I am <span>{dynamicText}</span><span className="cursor">|</span>
-      //   </div>
-
-      // </div>
-      // <img src={bg} alt='Profile' className='intro-photo'></img>
-
       
   );
 }

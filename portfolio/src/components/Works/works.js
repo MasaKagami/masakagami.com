@@ -1,7 +1,7 @@
 import React from 'react';
 // import './works.css';
 import Budgetr from '../../assets/budgetr.png';
-import Empor from '../../assets/empor_sc.png';
+import Empor from '../../assets/Empor.png';
 import MasaKagamiPreview from '../../assets/masakagami.png';
 
 
@@ -53,7 +53,7 @@ const Works = () => {
                 <div className='flex flex-col flex-1 justify-between gap-4'>
                     <div>
                         <div className='flex justify-between items-center py-2'>
-                            <h1 className='text-xl font-semibold'>empor</h1>
+                            <h1 className='text-xl font-semibold'>Empor</h1>
                             <div className='flex gap-2'>
                                 <a href="https://empor.ca/" target="_blank" rel="noopener noreferrer">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8">

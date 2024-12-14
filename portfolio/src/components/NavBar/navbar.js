@@ -1,5 +1,4 @@
 import React from 'react';
-// import './navbar.css';
 import logo from '../../../src/assets/logo.png'
 import contactImg from '../../../src/assets/contact.png'
 import { Link } from 'react-scroll'; //npmjs package
