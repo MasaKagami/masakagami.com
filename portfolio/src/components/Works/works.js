@@ -6,7 +6,7 @@ import MasaKagamiPreview from '../../assets/masakagami.png';
 
 const Works = () => { 
   return (
-    <div className="w-screen xl:max-w-[70%] max-w-[90%] m-auto flex flex-col gap-8 my-10">
+    <div id="works" className="w-screen xl:max-w-[70%] max-w-[90%] m-auto flex flex-col gap-8 my-10">
         <div className='space-y-2'>
             <p className='text-lg font-normal'>MY PROJECTS</p>
             <h1 className='text-4xl sm:text-5xl font-extrabold'>Websites and Applications.</h1>
@@ -32,7 +32,7 @@ const Works = () => {
                                 </a>
                             </div>
                         </div>
-                        <p className='text-justify'>Budgetr. is an intuitive financial dashboard that allows users to manage their expenses and budgets effectively. It features interactive charts for tracking spending trends, budget comparisons, and categorization of expenses. This tool is designed to provide clear insights into personal financial habits, helping users optimize their financial decisions.</p>
+                        <p className='text-start'>Budgetr. is an intuitive financial dashboard that allows users to manage their expenses and budgets effectively. It features interactive charts for tracking spending trends, budget comparisons, and categorization of expenses. This tool is designed to provide clear insights into personal financial habits, helping users optimize their financial decisions.</p>
                     </div>
 
                     <div className='flex gap-4 justify-end'>
@@ -67,7 +67,7 @@ const Works = () => {
                                 </a>
                             </div>
                         </div>
-                        <p className='text-justify'>Developing a student-exclusive marketplace platform where users can conduct transactions directly on the site,
+                        <p className='text-start'>Developing a student-exclusive marketplace platform where users can conduct transactions directly on the site,
                         designed to serve over 1,000 university students. <br/><br/> Led the front-end development using Next.js, TypeScript, and TailwindCSS to build a responsive interface, while collaborating
                         on back-end integration with Prisma and using Figma for design and user experience prototyping.</p>
                     </div>

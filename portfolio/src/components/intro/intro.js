@@ -48,7 +48,7 @@ const Intro = () => {
 
   return (
     <section id='intro'>
-      <div className="w-screen xl:max-w-[70%] max-w-[90%] m-auto flex flex-col md:flex-row my-10">
+      <div className="w-screen xl:max-w-[70%] max-w-[90%] m-auto flex flex-col md:flex-row min-h-screen">
         <div className='flex flex-col w-full md:w-1/2 justify-center gap-4'>
           <span className='text-6xl md:text-6xl lg:text-7xl font-bold whitespace-nowrap'>
             Hello, I am
@@ -87,7 +87,7 @@ const Intro = () => {
             I am <span>{dynamicText}</span><span className="cursor">|</span>
           </div>
         </div>
-        <div className='md:w-1/2  md:block'>
+        <div className='md:w-1/2  md:block m-auto h-full items-center'>
           <img src={masa} alt='Profile' className='' />
         </div>
       </div>
