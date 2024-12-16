@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import masa from '../../assets/masa_resize.png';
-import Spotify from '../../assets/logos/spotify.png';
-import LinkedIn from '../../assets/logos/linkedin.png';
-import GitHubWhite from '../../assets/logos/github-white.png';
-import btnImg from '../../assets/file.png';
+// import masa from '../../assets/masa_resize.png';
+// import Spotify from '../../assets/logos/spotify.png';
+// import LinkedIn from '../../assets/logos/linkedin.png';
+// import GitHubWhite from '../../assets/logos/github-white.png';
+// import btnImg from '../../assets/file.png';
 import Loader from "../intro/loader/loader";
 
 const Intro = () => {
@@ -28,7 +28,7 @@ const Intro = () => {
         {!loadingComplete && <Loader setLoadingComplete={setLoadingComplete} />}
         <div
           className={`${
-            loadingComplete ? 'opacity-100' : 'opacity-0'
+            loadingComplete ? 'opacity-100'  : 'opacity-0'
           } transition-opacity duration-[2500ms]`}
         >
           <div className="w-screen xl:max-w-[90%] max-w-[90%] m-auto flex flex-col md:flex-row h-[calc(100vh-3.5rem)]">
