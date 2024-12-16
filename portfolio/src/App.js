@@ -13,6 +13,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import FadeInSection from "./components/fadeInSection/fadeInSection";
 import About from "./components/About/about";
+import CursorLine from "./components/CursorLine/cursorLine"
 
 function App() {
 
@@ -23,24 +24,12 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
+              <CursorLine/>
               <Intro/>
-{/*               
-              <FadeInSection>
-                <Skills/>
-              </FadeInSection>
-              
-              <FadeInSection>
-               <Works/>
-              </FadeInSection>
-              
-              <FadeInSection>
-               <Contact/>
-              </FadeInSection>    */}
               <About />
               <Skills/>
               <Works/>
               <Contact/>
-              {/* <Outro/> */}
               <Footer/>
             </>
           } />
