@@ -32,14 +32,30 @@ const Intro = () => {
           } transition-opacity duration-[2500ms]`}
         >
           <div className="w-screen xl:max-w-[90%] max-w-[90%] m-auto flex flex-col md:flex-row h-[calc(100vh-3.5rem)]">
-            <div className='sm:flex flex-col w-full lg:text-[16rem] md:text-[12rem] hidden sm:text-[10rem] h-full justify-center'>
+            <div className='sm:flex flex-col w-full lg:text-[16rem] xl:text-[20rem]  sm:-space-y-12 md:-space-y-16 lg:-space-y-24 xl:-space-y-32 md:text-[12rem] hidden sm:text-[10rem] h-full justify-center'>
               <p className='text-start font-charm'>MASA</p>
               <p className='text-end font-charm'>KAGAMI</p>
             </div>
-            <div className='sm:hidden flex-col w-full flex justify-center items-center h-full text-[5rem]'>
-              <p className='text-start font-charm'>M<br/>A<br/>S<br/>A</p>
+            <div className='sm:hidden flex-col w-full flex justify-center -space-y-24 items-center h-full text-[10rem]'>
+              <p className='text-start font-charm'>M</p>
+              <p className='text-start font-charm'>A</p>
+              <p className='text-start font-charm'>S</p>
+              <p className='text-start font-charm'>A</p>
+
+                {/* <br/>A<br/>S<br/>A</p> */}
             </div>
           </div>
+          {/* <div className='z-50 text-xl'>     
+            <svg xmlns="http://www.w3.org/2000/svg" className='fixed top-10 left-10 z-50' height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-400q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm-40-240v-200h80v200h-80Zm0 520v-200h80v200h-80Zm200-320v-80h200v80H640Zm-520 0v-80h200v80H120Z"/></svg>   
+            <svg xmlns="http://www.w3.org/2000/svg" className='fixed top-10 right-10 z-50' height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-400q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm-40-240v-200h80v200h-80Zm0 520v-200h80v200h-80Zm200-320v-80h200v80H640Zm-520 0v-80h200v80H120Z"/></svg>   
+            <svg xmlns="http://www.w3.org/2000/svg" className='fixed bottom-10 left-10 z-50' height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-400q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm-40-240v-200h80v200h-80Zm0 520v-200h80v200h-80Zm200-320v-80h200v80H640Zm-520 0v-80h200v80H120Z"/></svg>   
+            <svg xmlns="http://www.w3.org/2000/svg" className='fixed top-10 left-10 z-50' height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-400q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm-40-240v-200h80v200h-80Zm0 520v-200h80v200h-80Zm200-320v-80h200v80H640Zm-520 0v-80h200v80H120Z"/></svg>   
+
+            <p className=' fixed font-charm text-white top-10 right-10 z-50'>A</p>
+            <p className=' fixed font-charm text-white bottom-10 left-10 z-50'>S</p>
+            <p className=' fixed font-charm text-white bottom-10 right-10 z-50'>A</p>
+
+          </div> */}
         </div>
       </section>
 

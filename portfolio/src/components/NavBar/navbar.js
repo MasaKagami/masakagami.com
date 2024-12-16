@@ -16,9 +16,9 @@ const Navbar = () => {
 
 
         <nav className={`sticky top-0 w-screen flex justify-between m-auto h-14 bg-black transform transition-opacity duration-1000 ${
-          loadingComplete ? 'opacity-100 z-50' : 'opacity-0'
+          loadingComplete ? 'opacity-100 z-10' : 'opacity-0'
           }`}>
-          <div className='flex flex-row gap-2 md:gap-10 w-full h-full justify-center items-center'>
+          <div className='flex mx-2 flex-row gap-2 md:gap-10 w-full h-full justify-center items-center'>
             <Link 
                 to="intro"
                 smooth={true}

@@ -59,11 +59,11 @@ const About = () => {
                     <p className='text-lg font-normal'>ABOUT ME</p>
                     <h1 className='text-4xl sm:text-5xl font-extrabold whitespace-nowrap'>Hi! I am Masa.</h1>
                 </div>
-                <div className="h-full flex flex-col flex-grow gap-4 text-base font-extralight">
-                    <p>Engineering Student @ McGill
+                <div className="h-full flex flex-col flex-grow gap-5 text-base font-base">
+                    <p>Electrical Engineering Student @ McGill
                         <br/>
-                        Majoring in Electrical Engineering & <br/>
-                        Minoring in Software Engineering
+                        <span className='text-sm font-extralight'>Major: Electrical Engineering<br/>
+                        Minor: Software Engineering</span>
                     </p>
                     <div className='flex md:flex-row flex-col gap-3 items-start justify-start'>
                         <a href="https://drive.google.com/file/d/17KtCPyguAvcPCWZq2pWR8WNvSEj1yY_f/view?usp=sharing" target="_blank" rel="noopener noreferrer" className=' btn btn-ghost flex w-auto items-center gap-2 px-4 py-2 rounded-lg justify-center border-2 border-white'>
@@ -93,7 +93,7 @@ const About = () => {
             {/* right side */}
             <div
                 className={`w-full md:w-1/2 h-full justify-center items-center z-0 transform transition-opacity duration-1000 ${
-                loadingComplete ? 'opacity-60' : 'opacity-0'
+                loadingComplete ? 'opacity-80' : 'opacity-0'
                 }`}
             >                
                 <img src={masa} alt="Masa Kagami" className='z-0 w-full h-auto'/>
