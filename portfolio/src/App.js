@@ -6,6 +6,7 @@ import Outro from "./components/outro/outro"
 import Footer from "./components/Footer/footer";
 import MusicRedirect from "./MusicRedirect";
 import BudgetrRedirect from "./BudgetrRedirect"
+import Contact from "./components/Contact/contact";
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
@@ -21,7 +22,8 @@ function App() {
               <Intro/>
               <Skills/>
               <Works/>
-              <Outro/>
+              <Contact/>
+              {/* <Outro/> */}
               <Footer/>
             </>
           } />

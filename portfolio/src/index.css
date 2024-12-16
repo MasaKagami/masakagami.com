@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --background: #010101;
+    --foreground: #ffffff;
+  }
+  
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'Outfit', 'Arial', 'Helvetica', 'sans-serif';
+  }
