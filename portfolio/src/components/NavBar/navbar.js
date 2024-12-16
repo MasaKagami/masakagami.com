@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 const Navbar = () => {
   
   return (
-        <nav className="sticky top-0 w-screen max-w-[95%] flex justify-between m-auto py-1 bg-black">
+        <nav className="sticky top-0 w-screen flex justify-between m-auto h-14 bg-black">
             <div className='flex flex-row gap-5 md:gap-10 w-full h-full justify-center items-center'>
             <Link 
                 to="intro"
@@ -23,7 +23,7 @@ const Navbar = () => {
                 duration={500}
                 offset={-100} // Scroll 100px above the section
  
-                className='border-white rounded-full border px-3 text-sm cursor-pointer'
+                className='rounded-full border border-[#010101] hover:border-white transition duration-300 ease-in-out px-3 text-sm cursor-pointer'
               >
                 ABOUT
               </Link>
@@ -33,7 +33,7 @@ const Navbar = () => {
                 duration={500} 
                 offset={-100} // Scroll 100px above the section
 
-                className='border-white rounded-full border px-3 text-sm cursor-pointer'
+                className='rounded-full border border-[#010101] hover:border-white transition duration-300 ease-in-out px-3 text-sm cursor-pointer'
               >
                 WORKS
               </Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 duration={500} 
                 offset={-100} // Scroll 100px above the section
 
-                className='border-white rounded-full border px-3 text-sm cursor-pointer'
+                className='rounded-full border border-[#010101] hover:border-white transition duration-300 ease-in-out px-3 text-sm cursor-pointer'
               >
                 CONTACT
               </Link>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,10 +7,23 @@
 :root {
     --background: #010101;
     --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Outfit', 'Charm', 'Arial', 'Helvetica', 'sans-serif';
+}
+
+/* Add this in your Tailwind CSS or a global CSS file */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
   }
-  
-  body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: 'Outfit', 'Arial', 'Helvetica', 'sans-serif';
+  50% {
+    opacity: 0.5;
   }
+}
+.fade-in-out {
+  animation: pulse 0.4s infinite;
+}
