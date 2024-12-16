@@ -36,7 +36,7 @@ const Intro = () => {
               <p className='text-start font-charm'>MASA</p>
               <p className='text-end font-charm'>KAGAMI</p>
             </div>
-            <div className='sm:hidden flex-col w-full flex justify-start -space-y-24 items-center h-full text-[10rem]'>
+            <div className='sm:hidden flex-col w-full flex justify-center -space-y-24 items-center h-full text-[10rem] pb-10'>
               <p className='text-start font-charm'>M</p>
               <p className='text-start font-charm'>A</p>
               <p className='text-start font-charm'>S</p>
