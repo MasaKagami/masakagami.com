@@ -157,7 +157,7 @@ const Navbar = () => {
 
       {isSideBarVisible && (
       <div
-        className={`fixed inset-0 z-50 bg-background w-screen h-screen bg-[#010101]  text-white transition-transform duration-700 ${
+        className={`fixed inset-0 z-50 bg-background w-screen h-screen bg-[#010101]  text-white transition-transform duration-700 mb-10 sm:mb-0 ${
           // isSideBarClosing ? True : False
           isSideBarClosing ? 'slide-up ' : 'slide-down'
         }`}  

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import blackShirt from "../../assets/T-shirt-black.png"
-import whiteShirt from "../../assets/T-shirt-white.png"
+// import blackShirt from "../../assets/T-shirt-black.png"
+// import whiteShirt from "../../assets/T-shirt-white.png"
 import Loader from "./loader/loader";
 import Typed from "typed.js";
 
@@ -52,7 +52,7 @@ const Intro = () => {
       <section id='home'>
         {!loadingComplete && <Loader setLoadingComplete={setLoadingComplete} />}
         <div
-          className={`overflow-x-hidden${
+          className={`${
             loadingComplete ? 'opacity-100': 'opacity-0'
           } transition-opacity duration-[2500ms]`}
         >
@@ -63,7 +63,9 @@ const Intro = () => {
                 <div className="w-full h-96 flex bg-[white] mt-36 sm:mt-48 text-black font-geologica font-medium -tracking-wider">
                   <span 
                     ref={el} 
-                    className="absolute w-full"
+                    className={`absolute w-full ${
+                      loadingComplete ? 'opacity-100': 'opacity-0'
+                    } transition-opacity duration-[2500ms]`}                  
                   ></span>
                 </div>
               </div>
@@ -71,7 +73,9 @@ const Intro = () => {
                 <div className="w-full h-96 flex bg-[#1b0dc6] mt-48 text-black font-geologica font-medium -tracking-wider">
                   <span 
                     ref={el2} 
-                    className="absolute w-full"
+                    className={`absolute w-full ${
+                      loadingComplete ? 'opacity-100': 'opacity-0'
+                    } transition-opacity duration-[2500ms]`}     
                   ></span>
                 </div>
               </div>
@@ -79,7 +83,9 @@ const Intro = () => {
                 <div className="w-full h-96 flex bg-[#fd4d34] mt-48 text-black font-geologica font-medium -tracking-wider">
                   <span 
                     ref={el3} 
-                    className="absolute w-full"
+                    className={`absolute w-full ${
+                      loadingComplete ? 'opacity-100': 'opacity-0'
+                    } transition-opacity duration-[2500ms]`}     
                   ></span>
                 </div>
               </div>
