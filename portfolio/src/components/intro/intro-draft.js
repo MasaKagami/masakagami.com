@@ -52,15 +52,15 @@ const Intro = () => {
       <section id='home'>
         {!loadingComplete && <Loader setLoadingComplete={setLoadingComplete} />}
         <div
-          className={`${
+          className={`overflow-x-hidden${
             loadingComplete ? 'opacity-100': 'opacity-0'
           } transition-opacity duration-[2500ms]`}
         >
-          <div className="w-screen xl:max-w-[90%] max-w-[90%] mx-auto h-screen flex flex-col py-10">
+          <div className="w-screen xl:max-w-[90%] max-w-[90%] mx-auto min-h-screen justify-between flex flex-col py-10">
             {/* <div className='flex text-3xl md:text-2xl lg:text-4xl xl:text-5xl h-full justify-around items-center w-full gap-4'> */}
-            <div className='flex text-8xl h-full justify-around items-center w-full gap-8'>
+            <div className='flex text-7xl sm:text-8xl h-full justify-around items-center w-full gap-8'>
               <div className='w-full h-full flex'>
-                <div className="w-full h-96 flex bg-[white] item mt-48 text-black font-geologica font-medium -tracking-wider">
+                <div className="w-full h-96 flex bg-[white] mt-36 sm:mt-48 text-black font-geologica font-medium -tracking-wider">
                   <span 
                     ref={el} 
                     className="absolute w-full"
@@ -68,7 +68,7 @@ const Intro = () => {
                 </div>
               </div>
               <div className='w-full h-full lg:flex hidden'>
-                <div className="w-full h-96 flex bg-[#1b0dc6] item mt-48 text-black font-geologica font-medium -tracking-wider">
+                <div className="w-full h-96 flex bg-[#1b0dc6] mt-48 text-black font-geologica font-medium -tracking-wider">
                   <span 
                     ref={el2} 
                     className="absolute w-full"
@@ -76,7 +76,7 @@ const Intro = () => {
                 </div>
               </div>
               <div className='w-full h-full xl:flex hidden'>
-                <div className="w-full h-96 flex bg-[#fd4d34] item mt-48 text-black font-geologica font-medium -tracking-wider">
+                <div className="w-full h-96 flex bg-[#fd4d34] mt-48 text-black font-geologica font-medium -tracking-wider">
                   <span 
                     ref={el3} 
                     className="absolute w-full"
@@ -147,9 +147,11 @@ const Intro = () => {
                 </div>
               </div> */}
             </div>
-            <div className='flex w-full justify-between text-base font-normal items-end '>
+            <div className='flex w-full justify-between text-base font-normal items-end gap-2'>
               <a href="https://drive.google.com/file/d/1tRL5ueUllPF28gNufx26mWrbscaLqoIU/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-gray-700'>
-                <p className='font-geologica'>View Resume</p>
+                <p className='font-geologica sm:hidden block'>View<br/>Resume</p>
+                <p className='font-geologica hidden sm:block'>View Resume</p>
+
               </a>
               <p className='font-geologica'>STUDENT ⋅ DEVELOPER ⋅ DJ</p>
               <p className='font-geologica'>Please<br/>Scroll...</p>
