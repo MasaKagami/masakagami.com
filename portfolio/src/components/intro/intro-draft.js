@@ -153,7 +153,9 @@ const Intro = () => {
                 <p className='font-geologica hidden sm:block'>View Resume</p>
 
               </a>
-              <p className='font-geologica'>STUDENT ⋅ DEVELOPER ⋅ DJ</p>
+              <p className='font-geologica sm:hidden block'>STUDENT ⋅ DEVELOPER</p>
+              <p className='font-geologica hidden sm:block'>STUDENT ⋅ DEVELOPER ⋅ DJ</p>
+
               <p className='font-geologica'>Please<br/>Scroll...</p>
             </div>
           </div>

@@ -125,7 +125,7 @@ const Navbar = () => {
           
           {/* Menu Button */}
           <button 
-            className='hamburger-label hover:transform hover:scale-110 hover:ease-in duration-200 flex items-center justify-center gap-3 md:gap-6 rounded-full text-5xl md:text-7xl font-bold px-8 md:px-10 py-1 md:py-2 bg-[#f1f1f1] text-black border-2 border-black'
+            className='hamburger-label hover:transform hover:scale-110 hover:ease-in duration-200 flex items-center justify-center gap-3 md:gap-6 rounded-full text-5xl md:text-7xl font-bold px-6 md:px-10 py-1 md:py-2 bg-[#f1f1f1] text-black border-2 border-black'
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => setIsSideBarVisible(true)}
@@ -172,7 +172,7 @@ const Navbar = () => {
             <div className='flex h-full items-center'>
               <ul className="space-y-2 text-start pl-10 font-geologica">
                 {['HOME', 'ABOUT', 'WORK', 'CONTACT'].map((text, index) => (
-                  <li key={index} className="text-7xl md:text-9xl font-bold cursor-pointer hover:text-gray-300 transition">
+                  <li key={index} className="text-6xl md:text-9xl font-bold cursor-pointer hover:text-gray-300 transition">
                     <Link to={text.toLowerCase()} smooth={true} duration={700} delay={700} onClick={closeSidebar}>
                       <h1 className="ml11">
                         <span className="text-wrapper">
@@ -186,7 +186,7 @@ const Navbar = () => {
               </ul>
             </div>
             <div 
-              className={`flex w-full justify-between px-10 pb-10 text-3xl m-auto transition-opacity ease-in-out duration-[1000ms] ${
+              className={`flex sm:flex-row text-end flex-col w-full justify-between px-10 pb-10 text-xl sm:text-3xl m-auto transition-opacity ease-in-out duration-[1000ms] ${
               isSocialVisible ? 'opacity-100' : 'opacity-0'
             }`}
             >
