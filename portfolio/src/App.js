@@ -1,6 +1,6 @@
 import Navbar from "./components/NavBar/navbar";
 // import Intro from "./components/intro/intro";
-import Intro from "./components/intro/intro-new";
+import Intro from "./components/intro/intro-draft";
 import Skills from "./components/Skills/skills";
 import Works from "./components/Works/works";
 // import Outro from "./components/outro/outro"
@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <CursorLine/>
+              {/* <CursorLine/> */}
               <Intro/>
               <About />
               <Skills/>

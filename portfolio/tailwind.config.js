@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        geologica: ['geologica', 'sans-serif'],
         sans: ['Inter', 'sans-serif'], // Use 'Inter' as your default sans font
         roboto: ['Roboto', 'sans-serif'], // Add Roboto as another option
         charm: ['charm', 'sans-serif'], // Add your custom font
