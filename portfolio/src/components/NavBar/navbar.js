@@ -144,7 +144,7 @@ const Navbar = () => {
 
           {/* Clan Logo */}
           <Link 
-            to="intro"
+            to="home"
             smooth={true}
             duration={500}
             offset={-100}
