@@ -22,7 +22,7 @@ const Loader = ({setLoadingComplete}) => {
     }, [setLoadingComplete]);
 
     return (
-        <div className="fixed w-screen h-screen inset-0 flex items-center justify-center bg-black text-white sm:text-[15rem] text-9xl md:text-[20rem] font-bold">
+        <div className="fixed w-screen h-screen inset-0 flex items-center justify-center bg-black z-50 text-white sm:text-[15rem] text-9xl md:text-[20rem] font-semibold">
             <span className="animate-pulse-1 font-geologica">{count}%</span>
         </div>
     );

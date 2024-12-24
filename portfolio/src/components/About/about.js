@@ -83,10 +83,10 @@ const About = () => {
         //         </div>
         //     </div>
         // </section>
-        <section id="about" className="w-screen bg-[#010101]">
+        <section id="about" className="w-screen bg-[#010101] overflow-x-hidden">
             <div className="w-full xl:max-w-[90%] max-w-[90%] mx-auto min-h-screen flex flex-col md:flex-row items-center justify-between py-20 md:py-32 gap-10">
                 {/* About Text */}
-                <div className="flex flex-col text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl w-full md:w-1/2 space-y-2 md:space-y-4">
+                <div className="flex flex-col text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl w-full md:w-1/2 space-y-2 md:space-y-4">
                     {[
                         "Born and raised in Bangkok,",
                         "Thailand, as a Japanese",
@@ -108,7 +108,11 @@ const About = () => {
                     ))}
                 </div>
                 {/* Image */}
-                <div className="w-full md:w-1/2 flex justify-center">
+                <div
+                    className={`w-full md:w-1/2 flex justify-center items-center transform transition-opacity duration-1000 ${
+                    loadingComplete ? 'opacity-100' : 'opacity-0'
+                    }`}
+                >
                     <img
                         src={masa}
                         alt="Masa Kagami"
