@@ -108,7 +108,11 @@ const About = () => {
                     ))}
                 </div>
                 {/* Image */}
-                <div className="w-full md:w-1/2 flex justify-center">
+                <div
+                    className={`w-full md:w-1/2 flex justify-center items-center transform transition-opacity duration-1000 ${
+                    loadingComplete ? 'opacity-100' : 'opacity-0'
+                    }`}
+                >
                     <img
                         src={masa}
                         alt="Masa Kagami"
