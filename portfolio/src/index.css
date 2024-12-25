@@ -144,3 +144,29 @@ html, body {
 .dud {
   color: #757575;
 }
+
+
+
+/* Project Section */
+.project-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #010101;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out; /* slide-down speed */
+}
+
+.project-item:hover .background-overlay { 
+  transform: translateY(0); 
+  transition: transform 0.2s ease-in-out /* slide-up */
+}
+
+.relative.z-10 {
+  position: relative;
+  z-index: 10;
+}
