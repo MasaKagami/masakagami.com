@@ -132,5 +132,15 @@ html, body {
   animation: slideUp 0.7s ease-out forwards;
 }
 
-/* About Section */
-  /* text change color */
+/* techincal skills Section */
+.scramble-text {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  color: #fafafa;
+  transition: color 0.3s ease;
+}
+
+.dud {
+  color: #757575;
+}

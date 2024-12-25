@@ -29,7 +29,6 @@ function App() {
               <About />
               <Skills/>
               <Works/>
-              <Contact/>
               <Footer/>
             </>
           } />

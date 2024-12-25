@@ -1,18 +1,64 @@
 import React from 'react';
 import Budgetr from '../../assets/budgetr.png';
 import Empor from '../../assets/empor.png';
+import EmporDisplay from '../../assets/empor-display.png';
+
 import MasaKagamiPreview from '../../assets/masakagami.png';
 
 
 const Works = () => { 
   return (
-    <div id="works" className="w-screen xl:max-w-[70%] max-w-[90%] m-auto flex flex-col gap-8 my-10">
+    <section id="works" className="w-screen max-w-[90%] xl:max-w-[90%] mx-auto min-h-screen flex flex-col my-20 md:mt-32 mb-20">
+        <p className='border-t-2 border-[#010101] text-xs font-light font-geologica py-2'>MY PROJECTS</p>
+        <div className='flex md:flex-row flex-col gap-16 md:gap-20 lg:gap-28 xl:gap-36 mt-16 mb-24'>
+            <div className='w-full md:w-1/3 flex flex-col gap-1 hover:text-gray-500'>
+                <img src={Empor} alt="screenshot of website" className='mb-8 shadow-md object-contain'></img>
+                <p className='font-geologica text-base font-light'>Empor</p>
+                <p className='font-geologica text-sm font-light text-gray-400'>Next.JS, TypeScript, TailwindCSS, & DaisyUI</p>
+            </div>
+            <div className='w-full md:w-1/3 flex flex-col gap-1 hover:text-gray-500'>
+                <img src={Budgetr} alt="screenshot of website" className='mb-8 shadow-md object-contain'></img>
+                <p className='font-geologica text-base font-light'>Budgetr</p>
+                <p className='font-geologica text-sm font-light text-gray-400'>Python, PostgreSQL, HTML, & CSS</p>
+            </div>
+            <div className='w-full md:w-1/3 flex flex-col gap-1 hover:text-gray-500'>
+                <img src={MasaKagamiPreview} alt="screenshot of website" className='mb-8 shadow-md object-contain'></img>
+                <p className='font-geologica text-base font-light'>This Portfolio Page</p>
+                <p className='font-geologica text-sm font-light text-gray-400'>React.JS, JavaScript, Anime.JS, TailwindCSS, & DaisyUI</p>
+            </div>
+        </div>
+
+        <p className='border-t-2 border-[#010101] text-xs font-light font-geologica py-2'>FEATURED PROJECT</p>
+        <div className='flex gap-36 mt-16 mb-24'>
+            <div className='w-full flex md:flex-row flex-col gap-10 md:gap-1 justify-between'>
+                <div className='flex flex-col gap-10 mt-24 w-full md:w-5/12'>
+                    <a href="https://empor.ca/" target="_blank" rel="noopener noreferrer">
+                        <p className='font-geologica text-8xl md:text-7xl lg:text-8xl font-base -tracking-wider inline-flex items-center gap-6 transofrm hover:text-gray-500 hover:scale-105 duration-100'>EMPOR
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.6" stroke="currentColor" class="size-12">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </p>
+                    </a>
+
+                    <p className='font-geologica font-light'>A student-exclusive marketplace platform where users can conduct transactions directly on the site,
+                        designed to serve over 1,000 university students. <br/><br/> Led the front-end development using Next.js, TypeScript, and TailwindCSS to build a responsive interface, while collaborating
+                        on back-end integration with Prisma and using Figma for design and user experience prototyping.</p>
+                    <a href="https://github.com/Erik-Cupsa/Empor-Frontend/" target="_blank" rel="noopener noreferrer" className='font-medium font-geologica underline hover:text-gray-500'>
+                        GITHUB PAGE
+                    </a>
+                </div>
+
+                <img src={EmporDisplay} alt="screenshot of website" className='w-full md:w-7/12 h-auto object-contain'></img>
+            </div>
+        </div>
+
+{/* 
+
         <div className='space-y-2'>
             <p className='text-lg font-normal'>MY PROJECTS</p>
             <h1 className='text-4xl sm:text-5xl font-extrabold'>Websites and Applications.</h1>
         </div>
         <div className='flex flex-col gap-4'>
-            {/* budgetr */}
             <div className='w-full border rounded-lg flex flex-col md:flex-row p-5 gap-5'>
                 <div className='flex flex-col flex-1 justify-between gap-4'>
                     <div>
@@ -47,7 +93,6 @@ const Works = () => {
                 </div>
             </div>
 
-            {/* empor */}
             <div className='w-full border rounded-lg flex flex-col md:flex-row p-5 gap-5'>
                 <div className='flex flex-col flex-1 justify-between gap-4'>
                     <div>
@@ -93,7 +138,6 @@ const Works = () => {
             </div>
 
 
-            {/* portfolio page */}
             <div className='w-full border rounded-lg flex flex-col md:flex-row p-5 gap-5'>
                 <div className='flex flex-col flex-1 justify-between gap-4'>
                     <div>
@@ -132,8 +176,8 @@ const Works = () => {
                     <img src={MasaKagamiPreview} alt="screenshot of website" className='object-contain'></img>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> */}
+    </section>
     )
 }
 
