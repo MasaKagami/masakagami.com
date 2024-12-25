@@ -150,7 +150,7 @@ const Navbar = () => {
             offset={-100}
             className='cursor-pointer hover:scale-110 hover:transform duration-200'
           >
-            <img src={logo} alt="Logo" className='h-16 md:h-20 w-auto rounded-full border-4 border-black p-2 bg-[#f1f1f1] border-collapse'/>
+            <img src={logo} alt="Logo" className='h-14 sm:h-16 md:h-20 w-auto rounded-full border-4 border-black p-2 bg-[#f1f1f1] border-collapse'/>
           </Link>
         </div>
       </nav>
