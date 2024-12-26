@@ -125,7 +125,7 @@ const Navbar = () => {
           
           {/* Menu Button */}
           <button 
-            className='hamburger-label hover:transform hover:scale-110 hover:ease-in duration-200 flex items-center justify-center gap-3 md:gap-6 rounded-full text-5xl md:text-7xl font-bold px-6 md:px-10 py-1 md:py-2 bg-[#f1f1f1] text-black border-2 border-black'
+            className='z-[500] hamburger-label hover:transform hover:scale-110 hover:ease-in duration-200 flex items-center justify-center gap-3 md:gap-6 rounded-full text-5xl md:text-7xl font-bold px-6 md:px-10 py-1 md:py-2 bg-[#f1f1f1] text-black border-2 border-black'
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => setIsSideBarVisible(true)}
