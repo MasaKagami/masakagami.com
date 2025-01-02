@@ -197,7 +197,7 @@ const Navbar = () => {
                 <p className='font-geologica hover:text-gray-300 cursor-pointer'>INSTAGRAM</p>
               </a>
               <a href="https://soundcloud.com/jodyekagami" target="_blank" rel="noopener noreferrer">
-                <p className='font-geologica hover:text-gray-300 cursor-pointer'>SOUNDCLOUD</p>
+                <p className='font-geologica hover:text-gray-300 cursor-pointer'>MY PLAYLISTS</p>
               </a>
             </div>
           </div>
