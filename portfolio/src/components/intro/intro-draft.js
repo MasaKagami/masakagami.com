@@ -89,69 +89,6 @@ const Intro = () => {
                   ></span>
                 </div>
               </div>
-              {/* <div 
-                className='w-full md:w-1/2 flex h-[46rem] justify-center items-center relative' 
-                style={{ 
-                  backgroundImage: `url(${whiteShirt})`, 
-                  backgroundSize: 'contain', 
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat', 
-                }}
-              >
-                <div className="relative text-black font-geologica font-semibold -tracking-wider">
-                  <span 
-                    ref={el} 
-                    className="absolute w-full 
-                    -top-[6rem] -left-[5rem]
-                    sm:-top-[6rem] sm:-left-[5rem]
-                    md:-top-[6rem] md:-left-[4rem]
-                    lg:-top-[6rem] lg:-left-[5rem]
-                    xl:-top-[8rem] xl:-left-[7rem]"
-                  ></span>
-                </div>
-              </div>
-              <div 
-                className='hidden md:w-1/2 md:flex h-[46rem] justify-center items-center relative' 
-                style={{ 
-                  backgroundImage: `url(${blackShirt})`, 
-                  backgroundSize: 'contain', 
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
-                }}
-              >
-                <div className="relative text-white font-geologica font-semibold -tracking-wider">
-                  <span 
-                    ref={el2} 
-                    className="absolute w-full 
-                    -top-[6rem] -left-[5rem]
-                    sm:-top-[6rem] sm:-left-[5rem]
-                    md:-top-[6rem] md:-left-[4rem]
-                    lg:-top-[6rem] lg:-left-[5rem]
-                    xl:-top-[8rem] xl:-left-[7rem]"
-                  ></span>
-                </div>
-              </div>
-              <div 
-                className='hidden md:w-1/2 md:flex h-[46rem] justify-center items-center relative' 
-                style={{ 
-                  backgroundImage: `url(${blackShirt})`, 
-                  backgroundSize: 'contain', 
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
-                }}
-              >
-                <div className="relative text-white font-geologica font-semibold -tracking-wider">
-                  <span 
-                    ref={el3} 
-                    className="absolute w-full 
-                    -top-[6rem] -left-[5rem]
-                    sm:-top-[6rem] sm:-left-[5rem]
-                    md:-top-[6rem] md:-left-[4rem]
-                    lg:-top-[6rem] lg:-left-[5rem]
-                    xl:-top-[8rem] xl:-left-[7rem]"
-                  ></span>
-                </div>
-              </div> */}
             </div>
             <div className='flex w-full justify-between text-base font-normal items-end gap-2'>
               <a href="https://drive.google.com/file/d/1tRL5ueUllPF28gNufx26mWrbscaLqoIU/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-gray-700'>
@@ -159,9 +96,7 @@ const Intro = () => {
                 <p className='font-geologica hidden sm:block'>View Resume</p>
 
               </a>
-              <p className='font-geologica sm:hidden block'>STUDENT ⋅ DEVELOPER</p>
-              <p className='font-geologica hidden sm:block'>STUDENT ⋅ DEVELOPER ⋅ DJ</p>
-
+              <p className='font-geologica block'>STUDENT ⋅ DEVELOPER</p>
               <p className='font-geologica'>Please<br/>Scroll...</p>
             </div>
           </div>
