@@ -153,20 +153,6 @@ html, body {
   overflow: hidden;
 }
 
-.background-overlay {
-  position: absolute;
-  z-index: 2;
-  inset: 0;
-  background-color: #010101;
-  transform: translateY(600%);
-  transition: transform 0.4s ease-in-out; /* slide-down speed */
-}
-
-.project-item:hover .background-overlay { 
-  transform: translateY(0); 
-  transition: transform 0.2s ease-in-out /* slide-up */
-}
-
 .relative.z-10 {
   position: relative;
   z-index: 10;

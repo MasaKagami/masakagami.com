@@ -9,7 +9,7 @@ import EmporDisplay from '../../assets/empor-display.png';
 const Works = () => {     
 
     return (
-        <section id="works" className="w-screen max-w-[90%] xl:max-w-[90%] mx-auto min-h-screen flex flex-col my-20 md:mt-32 mb-20">
+        <section id="work" className="w-screen max-w-[90%] xl:max-w-[90%] mx-auto min-h-screen flex flex-col my-20 md:mt-32 mb-20">
             <div>
                 <div className='flex justify-between text-sm lg:text-2xl font-bold pb-8 border-b-2 border-[#010101]'>
                     <p className='font-geologica w-[40%] lg:w-[45%]'>PROJECTS</p>
