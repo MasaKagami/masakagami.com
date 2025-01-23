@@ -32,7 +32,7 @@ function App() {
               <Footer/>
             </>
           } />
-          <Route path="/music" element={<MusicRedirect />} />
+          <Route path="/playlist" element={<MusicRedirect />} />
           <Route path="/budgetr" element={<BudgetrRedirect />} />
         </Routes>
       </div>

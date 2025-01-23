@@ -18,7 +18,7 @@ function MusicRedirect() {
   }, []);
 
   return (
-    <div>Redirecting to a music video...</div>
+    <div>Redirecting to masa's playlists...</div>
   );
 }
 
