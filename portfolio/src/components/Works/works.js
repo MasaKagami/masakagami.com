@@ -2,6 +2,7 @@ import React from 'react';
 import Budgetr from '../../assets/budgetr.png';
 import Empor from '../../assets/empor.png';
 import EmporDisplay from '../../assets/empor-display.png';
+import LinkAffiliate from '../../assets/link-affiliates.png';
 
 // import MasaKagamiPreview from '../../assets/masakagami.png';
 
@@ -127,8 +128,63 @@ const Works = () => {
                         </div>
                     </div>
 
-                    {/* masakagami.com */}
+                    {/* MyHealthPal */}
                     <div tabIndex={2} className='collapse rounded-none w-full border-b-2 border-[#010101] group'>
+                        <div className='collapse-title flex bg-[#f1f1f1] py-8 px-2 md:px-6'>
+                            <div className='flex items-center md:gap-4 gap-2 w-[40%] lg:w-[45%] relative z-[2]'>
+                                <p className="text-sm sm:text-xl md:text-2xl lg:text-4xl">MyHealthPal</p>
+
+                                <a href="https://devpost.com/software/myhealthpal" target="_blank" rel="noopener noreferrer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/MasaKagami/myhealthpal--frontend" target="_blank" rel="noopener noreferrer">
+                                    <svg className='size-8 fill-black' role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <title>GitHub</title>
+                                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            
+                            <div className="flex gap-2 md:gap-4 w-[35%] relative z-[2]">
+                                <svg className="size-6 md:size-10 fill-black" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>JavaScript</title><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+                                <svg className="size-6 md:size-10 fill-black" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Tailwind CSS</title>
+                                    <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+                                </svg>       
+                                <svg className="size-6 md:size-10 fill-black" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Next.js</title>
+                                    <path d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"/>
+                                </svg>                    
+                            </div>
+                            {/* arrow animation */}
+                            <div className="w-[25%] lg:w-[20%] flex justify-end relative z-[2]">
+                                {/* Right arrow */}
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.2" stroke="currentColor" className="arrow-right size-8 md:size-10 group-hover:translate-x-12 opacity-0 transition-all duration-300">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                                {/* Down arrow */}
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.2" stroke="currentColor" className="arrow-down size-8 md:size-10 group-hover:translate-y-0 opacity-100 transition-all duration-500 -translate-y-full">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18m0 0-6-6m6 6 6-6" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        {/* description */}
+                        <div className='collapse-content bg-[#f1f1f1] text-black items-start flex md:flex-row flex-col justify-center w-full gap-4 md:gap-10'>
+                            <div className='h-auto flex flex-col justify-between w-full'>
+                                <p className='font-geologica font-extralight text-lg text-start w-full pt-4'>MyHealthPal is a GPT-powered virtual health assistant that enhances healthcare accessibility. Built with Next.js and Tailwind CSS, it provides personalized symptom assessments, preventative care tips, and geolocation-based clinic recommendations. It also integrates a custom neural network for sentiment analysis with 94% accuracy, offering a more intuitive user experience.</p>
+                            </div>
+                            {/* <div className='md:w-2/5 w-full'>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/op9wxJNVkcM?si=PF2UgiDv-f4gf0DV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div> */}
+                        </div>
+                    </div>
+
+
+                    {/* masakagami.com */}
+                    <div tabIndex={3} className='collapse rounded-none w-full border-b-2 border-[#010101] group'>
                         <div className='collapse-title flex bg-[#f1f1f1] py-8 px-2 md:px-6'>
                             <div className='flex items-center md:gap-4 gap-2 w-[40%] lg:w-[45%] relative z-[2]'>
                                 <p className="text-sm sm:text-xl md:text-2xl lg:text-4xl">masakagami.com</p>

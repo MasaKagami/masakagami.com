@@ -7,13 +7,13 @@ import Works from "./components/Works/works";
 import Footer from "./components/Footer/footer";
 import MusicRedirect from "./MusicRedirect";
 import BudgetrRedirect from "./BudgetrRedirect"
-import Contact from "./components/Contact/contact";
+// import Contact from "./components/Contact/contact";
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import FadeInSection from "./components/fadeInSection/fadeInSection";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import FadeInSection from "./components/fadeInSection/fadeInSection";
 import About from "./components/About/about";
-import CursorLine from "./components/CursorLine/cursorLine"
+// import CursorLine from "./components/CursorLine/cursorLine"
 
 function App() {
 
