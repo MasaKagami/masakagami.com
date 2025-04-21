@@ -4,7 +4,7 @@ function MusicRedirect() {
   useEffect(() => {
     // Array of YouTube video URLs
     const videos = [
-      "https://soundcloud.com/jodyekagami"
+      "https://soundcloud.com/masakagami"
 
 
       // Add more URLs as needed
