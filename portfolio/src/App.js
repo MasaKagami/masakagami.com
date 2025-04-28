@@ -1,6 +1,6 @@
 import Navbar from "./components/NavBar/navbar";
 // import Intro from "./components/intro/intro";
-import Intro from "./components/intro/intro-draft";
+import Intro from "./components/intro/intro";
 import Skills from "./components/Skills/skills";
 import Works from "./components/Works/works";
 // import Outro from "./components/outro/outro"

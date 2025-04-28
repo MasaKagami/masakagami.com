@@ -118,7 +118,7 @@ const Navbar = () => {
   return (
     <>
       <nav className={`fixed top-0 w-screen flex justify-between m-auto transform transition-opacity duration-1000 ${
-        loadingComplete ? 'opacity-100 z-10' : 'opacity-0'
+        loadingComplete ? 'opacity-100 z-50' : 'opacity-0'
         }`}
       >
         <div className='flex justify-between gap-4 max-w-[90%] mt-10 w-full mx-auto font-geologica items-center'>
