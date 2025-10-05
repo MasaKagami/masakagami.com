@@ -18,8 +18,9 @@ const Intro = () => {
 
   // Text options for the particle system to cycle through
   const textOptions = [
-    { mainText: 'MASA KAGAMI', subText: 'FRONTEND DEV' },
-    { mainText: 'LOOKING FOR A', subText: 'JUNIOR FRONTEND JOB' }
+    { mainText: 'MASA KAGAMI', subText: 'FRONTEND DEV' }
+    // ,
+    // { mainText: 'LOOKING FOR A', subText: 'JUNIOR FRONTEND JOB' }
   ];
 
   useEffect(() => {
