@@ -5,7 +5,6 @@ import anime from 'animejs/lib/anime.es.js';
 
 const Navbar = () => {
   
-  const [isHovered, setIsHovered] = useState(false);
   const [isSideBarVisible, setIsSideBarVisible] = useState(false);
   const [isSideBarClosing, setisSideBarClosing] = useState(false);
   const [isSocialVisible, setIsSocialVisible] = useState(false);
@@ -91,36 +90,13 @@ const Navbar = () => {
           
           {/* Menu Button */}
           <button
-            className='z-[500] flex items-center gap-3 md:gap-4 rounded-full text-base md:text-2xl font-bold px-5 md:px-8 py-3 md:py-4 bg-[#f1f1f1] text-black border border-black cursor-pointer hover:scale-105 transition-transform duration-200'
+            className='z-[500] group flex items-center gap-3 md:gap-4 rounded-full text-base md:text-2xl font-bold px-5 md:px-8 py-3 md:py-4 bg-[#f1f1f1] text-black border-2 border-black cursor-pointer hover:bg-black hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300'
             onClick={() => setIsSideBarVisible(true)}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
           >
-            <div className="flex flex-col justify-center items-start w-6 md:w-9 h-4 md:h-5 relative">
-              {/* Top line */}
-              <span
-                className='absolute left-0 w-full h-[2px] md:h-[2.5px] bg-black transition-all duration-300 ease-in-out'
-                style={{
-                  top: isHovered ? '50%' : '0',
-                  transform: isHovered ? 'translateY(-50%) rotate(-35deg) scaleX(0.6)' : 'none',
-                  transformOrigin: 'right center',
-                }}
-              />
-              {/* Middle line */}
-              <span
-                className='absolute left-0 top-1/2 -translate-y-1/2 h-[2px] md:h-[2.5px] bg-black transition-all duration-300 ease-in-out'
-                style={{ width: isHovered ? '60%' : '100%' }}
-              />
-              {/* Bottom line */}
-              <span
-                className='absolute left-0 w-full h-[2px] md:h-[2.5px] bg-black transition-all duration-300 ease-in-out'
-                style={{
-                  bottom: isHovered ? undefined : '0',
-                  top: isHovered ? '50%' : undefined,
-                  transform: isHovered ? 'translateY(-50%) rotate(35deg) scaleX(0.6)' : 'none',
-                  transformOrigin: 'right center',
-                }}
-              />
+            <div className="flex flex-col justify-between w-6 md:w-8 h-3.5 md:h-[18px]">
+              <span className='h-[2px] w-full bg-black rounded-full transition-all duration-300 group-hover:bg-white group-hover:w-3/5' />
+              <span className='h-[2px] w-full bg-black rounded-full transition-all duration-300 group-hover:bg-white' />
+              <span className='h-[2px] w-full bg-black rounded-full transition-all duration-300 group-hover:bg-white group-hover:w-3/5 self-end' />
             </div>
             <span className="font-geologica leading-none">MENU</span>
           </button>
@@ -131,7 +107,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             offset={-100}
-            className='cursor-pointer hover:scale-110 hover:transform duration-200'
+            className='cursor-pointer hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] rounded-full transition-all duration-300'
           >
             <img src={logo} alt="Logo" className='h-12 sm:h-14 md:h-16 w-auto rounded-full border-2 border-black p-1.5 bg-[#f1f1f1]'/>
           </Link>

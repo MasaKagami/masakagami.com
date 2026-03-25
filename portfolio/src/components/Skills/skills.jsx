@@ -56,12 +56,13 @@ const Skills = () => {
       }
     }
 
-    // Initialize scramble effect on hover
+    // Initialize scramble effect on hover — listen on parent for stable hit area
     const elements = document.querySelectorAll('.scramble-text');
     elements.forEach((el) => {
       const fx = new TextScramble(el);
-      el.addEventListener('mouseenter', () => {
-        fx.setText(el.dataset.text); // Scramble the current text
+      const trigger = el.parentElement;
+      trigger.addEventListener('mouseenter', () => {
+        fx.setText(el.dataset.text);
       });
     });
   }, []);
@@ -78,9 +79,11 @@ const Skills = () => {
           <p className="text-2xl font-medium mt-2 font-geologica text-[#f1f1f1]">LANGUAGES</p>
           <div className="flex flex-col text-end w-8/12">
             {['JavaScript', 'TypeScript', 'Python', 'Java', 'ARM Assembly', 'Matlab', 'HTML', 'CSS'].map((skill, index) => (
-              <span key={index} className="scramble-text border-b border-b-gray-800 w-full" data-text={skill}>
-                {skill}
-              </span>
+              <div key={index} className="group border-b border-b-white/10 w-full">
+                <span className="scramble-text group-hover:text-white" data-text={skill}>
+                  {skill}
+                </span>
+              </div>
             ))}
           </div>
         </div>
@@ -88,9 +91,11 @@ const Skills = () => {
           <p className="text-2xl font-medium mt-2 font-geologica text-[#f1f1f1]">FRAMEWORKS</p>
           <div className="flex flex-col text-end w-8/12">
             {['React.JS', 'Next.JS', 'Vue.JS', 'Django', 'Node.JS', 'Spring', 'Pandas', 'Numpy', 'Dash by Plotly', 'Bootstrap', 'TailwindCSS', 'DaisyUI'].map((framework, index) => (
-              <span key={index} className="scramble-text border-b border-b-gray-800 w-full" data-text={framework}>
-                {framework}
-              </span>
+              <div key={index} className="group border-b border-b-white/10 w-full">
+                <span className="scramble-text group-hover:text-white" data-text={framework}>
+                  {framework}
+                </span>
+              </div>
             ))}
           </div>
         </div>
@@ -98,9 +103,11 @@ const Skills = () => {
           <p className="text-2xl font-medium mt-2 font-geologica text-[#f1f1f1]">DATA MANAGEMENT AND ANALYSIS</p>
           <div className="flex flex-col text-end w-8/12">
             {['PostgreSQL', 'Pandas', 'Numpy'].map((tool, index) => (
-              <span key={index} className="scramble-text border-b border-b-gray-800 w-full" data-text={tool}>
-                {tool}
-              </span>
+              <div key={index} className="group border-b border-b-white/10 w-full">
+                <span className="scramble-text group-hover:text-white" data-text={tool}>
+                  {tool}
+                </span>
+              </div>
             ))}
           </div>
         </div>

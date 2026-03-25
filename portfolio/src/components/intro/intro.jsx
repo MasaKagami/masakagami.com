@@ -11,9 +11,9 @@ const themes = [
 const Intro = () => {
   const [themeIndex, setThemeIndex] = useState(0);
   const textSets = useMemo(() => [
-    ['MASA KAGAMI', 'FRONTEND DEV'],
-    ['MASA KAGAMI', 'PRODUCT ENGINEER'],
-    ['MASA KAGAMI', 'PARTNER AT Z3NTRA'],
+    ['MASA KAGAMI', 'FRONTEND\nDEVELOPER'],
+    ['MASA KAGAMI', 'PRODUCT\nENGINEER'],
+    ['MASA KAGAMI', 'PARTNER\nAT Z3NTRA'],
   ], []);
 
   useEffect(() => {
@@ -51,14 +51,14 @@ const Intro = () => {
             to="work"
             smooth={true}
             duration={1000}
-            offset={-200}
+            offset={-80}
             className="cursor-pointer bg-white/10 backdrop-blur-sm text-white px-6 py-3 text-lg font-medium hover:bg-white hover:text-black transition-colors duration-300 border border-white/30"
           >
             Projects
           </Link>
         </div>
         <p className="text-sm sm:text-base text-white font-geologica">
-          STUDENT · DEVELOPER
+          DEVELOPER
         </p>
       </div>
 

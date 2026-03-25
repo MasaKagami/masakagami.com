@@ -3,7 +3,8 @@
     "allow": [
       "Bash(cd:*)",
       "Bash(npm install:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(grep -r \"circle\\\\|rounded-full\" /c/Users/nagam/Documents/GitHub/masakagami.com/portfolio/src/components --include=*.jsx --include=*.js)"
     ]
   }
 }

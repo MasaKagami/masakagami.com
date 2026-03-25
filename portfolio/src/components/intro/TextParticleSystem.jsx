@@ -35,8 +35,8 @@ const TextParticleSystem = ({
       let mainSize, subSize, density;
       if (isMobile) {
         mainSize = Math.min(s.w / 5, 80);
-        subSize = mainSize * 0.5;
-        density = Math.max(4, Math.floor(mainSize / 14));
+        subSize = mainSize * 0.7;
+        density = Math.max(3, Math.floor(mainSize / 14));
       } else {
         mainSize = Math.min(s.w / 12, 140);
         subSize = mainSize * 0.6;
@@ -84,9 +84,12 @@ const TextParticleSystem = ({
 
         // Calculate total block height
         const lineGap = actualMainSize * 0.15;
-        const subActualSize = texts[1] ? fitText(texts[1], 400, subSize, maxWidth) : 0;
+        const subLines = texts[1] ? texts[1].split('\n') : [];
+        const subSizes = subLines.map(line => fitText(line, 600, subSize, maxWidth));
+        const subActualSize = subSizes.length > 0 ? Math.min(...subSizes) : 0;
+        const subLineGap = subActualSize * 0.3;
         const totalHeight = actualMainSize * lines.length + lineGap * (lines.length - 1) +
-          (texts[1] ? gap + subActualSize : 0);
+          (subLines.length > 0 ? gap + subActualSize * subLines.length + subLineGap * (subLines.length - 1) : 0);
 
         let curY = s.h / 2 - totalHeight / 2 + actualMainSize / 2;
 
@@ -97,11 +100,14 @@ const TextParticleSystem = ({
           curY += actualMainSize + lineGap;
         }
 
-        // Draw sub text
-        if (texts[1]) {
+        // Draw sub text lines
+        if (subLines.length > 0) {
           curY += gap - lineGap;
-          c.font = `400 ${subActualSize}px geologica, sans-serif`;
-          c.fillText(texts[1], s.w / 2, curY);
+          c.font = `600 ${subActualSize}px geologica, sans-serif`;
+          for (const subLine of subLines) {
+            c.fillText(subLine, s.w / 2, curY);
+            curY += subActualSize + subLineGap;
+          }
         }
       } else {
         // Desktop: single line each
@@ -109,8 +115,9 @@ const TextParticleSystem = ({
         c.fillText(texts[0], s.w / 2, s.h / 2 - subSize / 2 - gap / 2);
 
         if (texts[1]) {
-          c.font = `400 ${subSize}px geologica, sans-serif`;
-          c.fillText(texts[1], s.w / 2, s.h / 2 + mainSize / 2 + gap / 2);
+          const subText = texts[1].replace(/\n/g, ' ');
+          c.font = `600 ${subSize}px geologica, sans-serif`;
+          c.fillText(subText, s.w / 2, s.h / 2 + mainSize / 2 + gap / 2);
         }
       }
 
@@ -154,9 +161,19 @@ const TextParticleSystem = ({
     };
 
     const resize = () => {
-      s.w = canvas.width = window.innerWidth;
-      s.h = canvas.height = window.innerHeight;
-      s.isMobile = s.w < 768;
+      const newW = window.innerWidth;
+      const newH = window.innerHeight;
+
+      // On mobile, small height changes from address bar show/hide shouldn't reset
+      if (s.w > 0 && Math.abs(newW - s.w) < 2 && Math.abs(newH - s.h) < 150) {
+        s.w = canvas.width = newW;
+        s.h = canvas.height = newH;
+        return;
+      }
+
+      s.w = canvas.width = newW;
+      s.h = canvas.height = newH;
+      s.isMobile = newW < 768;
       spawnEntering(s.textIndex);
     };
 
