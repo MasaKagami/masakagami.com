@@ -25,7 +25,7 @@ const Intro = () => {
 
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
-      <h1 className="sr-only">Masa Kagami — Frontend Developer</h1>
+      <h1 className="sr-only">Nagamasa Kagami (Masa Kagami) — Frontend Developer & Product Engineer</h1>
 
       {/* Background */}
       <div
