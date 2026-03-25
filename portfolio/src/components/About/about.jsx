@@ -1,14 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import masa from '../../assets/masa-2.jpeg';
 
 const About = () => {
-    const [loadingComplete, setLoadingComplete] = useState(false);
-    
-    useEffect(() => {
-        // Simulate loading completion after 2 seconds
-        const timeout = setTimeout(() => setLoadingComplete(true), 4500);
-        return () => clearTimeout(timeout); // Cleanup on unmount
-    }, []);
     
     useEffect(() => {
         const handleScroll = () => {
@@ -42,10 +35,11 @@ const About = () => {
     }, []);
       
     return(
-        <section id="about" className="w-screen bg-[#010101] overflow-x-hidden">
-            <div className="w-full xl:max-w-[90%] max-w-[90%] mx-auto min-h-screen flex flex-col md:flex-row items-center justify-between py-20 md:py-32 gap-10 overflow-x-hidden">
+        <section id="about" className="w-full bg-[#010101]">
+            <h2 className="sr-only">About Nagamasa Kagami</h2>
+            <div className="w-[90%] mx-auto min-h-screen flex flex-col md:flex-row items-center justify-between py-20 md:py-32 gap-10">
                 {/* About Text */}
-                <div className="flex flex-col text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl w-full md:w-1/2 space-y-2 md:space-y-4 overflow-x-hidden-">
+                <div className="flex flex-col text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl w-full md:w-1/2 space-y-2 md:space-y-4">
                     {[
                         "Born and raised in Bangkok,",
                         "Thailand, as a Japanese",
@@ -67,11 +61,7 @@ const About = () => {
                     ))}
                 </div>
                 {/* Image */}
-                <div
-                    className={`w-full md:w-1/2 flex justify-center items-center transform transition-opacity duration-1000 overflow-x-hidden ${
-                    loadingComplete ? 'opacity-100' : 'opacity-0'
-                    }`}
-                >
+                <div className="w-full md:w-1/2 flex justify-center items-center">
                     <img
                         src={masa}
                         alt="Masa Kagami"

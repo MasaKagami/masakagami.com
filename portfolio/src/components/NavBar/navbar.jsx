@@ -5,45 +5,15 @@ import anime from 'animejs/lib/anime.es.js';
 
 const Navbar = () => {
   
-  const [loadingComplete, setLoadingComplete] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isSideBarVisible, setIsSideBarVisible] = useState(false);
   const [isSideBarClosing, setisSideBarClosing] = useState(false);
   const [isSocialVisible, setIsSocialVisible] = useState(false);
-  
-  useEffect(() => {
-    // Simulate loading completion after 4.5 seconds
-    const timeout = setTimeout(() => setLoadingComplete(true), 4500);
-    return () => clearTimeout(timeout); // Cleanup on unmount
-  }, []);
-
-  // menu button text animation
-  useEffect(() => {
-    if (isHovered) {
-      const textWrapper = document.querySelector('.ml6 .letters');
-      if (textWrapper) {
-        textWrapper.innerHTML = textWrapper.textContent.replace(
-          /\S/g, "<span class='letter'>$&</span>"
-        );
-        
-        anime
-          .timeline({ loop: false })
-          .add({
-            targets: '.ml6 .letter',
-            translateY: ["1.1em", 0],
-            translateZ: 0,
-            duration: 750,
-            delay: (el, i) => 50 * i,
-            easing: "easeOutExpo",
-          })
-      }
-    }
-  }, [isHovered]);
 
   // side-bar text animation
   useEffect(() => {
     if (isSideBarVisible) {
-      const initialDelay = 1000;
+      const initialDelay = 400;
       const textWrappers = document.querySelectorAll('.ml11');
 
       textWrappers.forEach((wrapper) => {
@@ -54,7 +24,6 @@ const Navbar = () => {
         textWrappers.forEach((wrapper, index) => {
           const letters = wrapper.querySelector('.letters');
           if (letters) {
-            // Wrap letters in spans
             letters.innerHTML = letters.textContent.replace(
               /\S/g,
               "<span class='letter'>$&</span>"
@@ -69,7 +38,7 @@ const Navbar = () => {
                 scaleY: [0, 1],
                 opacity: [0.5, 1],
                 easing: 'easeOutExpo',
-                duration: 300, 
+                duration: 300,
                 delay: index * 1000,
               })
               .add({
@@ -88,7 +57,7 @@ const Navbar = () => {
                 easing: 'easeOutExpo',
                 duration: 300,
                 offset: '-=300',
-                delay: (el, i) => 15 * (i + 1), // Reduced per-letter delay
+                delay: (el, i) => 15 * (i + 1),
               })
               .add({
                 targets: wrapper.querySelector('.line'),
@@ -112,34 +81,48 @@ const Navbar = () => {
       setIsSideBarVisible(false);
       setisSideBarClosing(false);
       setIsSocialVisible(false);
-    }, 700);
+    }, 350);
   }
 
   return (
     <>
-      <nav className={`fixed top-0 w-screen flex justify-between m-auto transform transition-opacity duration-1000 ${
-        loadingComplete ? 'opacity-100 z-50' : 'opacity-0'
-        }`}
-      >
-        <div className='flex justify-between gap-4 max-w-[90%] mt-10 w-full mx-auto font-geologica items-center'>
+      <nav className="fixed top-0 left-0 right-0 z-50">
+        <div className='flex justify-between gap-4 w-[90%] mt-10 mx-auto font-geologica items-center'>
           
           {/* Menu Button */}
-          <button 
-            className='z-[500] hamburger-label hover:transform hover:scale-110 hover:ease-in duration-200 flex items-center justify-center gap-3 md:gap-6 rounded-full text-5xl md:text-7xl font-bold px-6 md:px-10 py-1 md:py-2 bg-[#f1f1f1] text-black border-2 border-black'
+          <button
+            className='z-[500] flex items-center gap-3 md:gap-4 rounded-full text-base md:text-2xl font-bold px-5 md:px-8 py-3 md:py-4 bg-[#f1f1f1] text-black border border-black cursor-pointer hover:scale-105 transition-transform duration-200'
+            onClick={() => setIsSideBarVisible(true)}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            onClick={() => setIsSideBarVisible(true)}
           >
-            <div className="relative flex flex-col gap-2 items-center justify-center h-full">
-              <div className='line1-small md:line1 transition-all duration-300 w-12 md:w-14 h-1 md:h-2 bg-black'></div>
-              <div className='w-12 md:w-14 h-1 md:h-2 bg-black'></div>
-              <div className='"md:line3 line3-small transition-all duration-300 w-12 md:w-14 h-1 md:h-2 bg-black'></div>
-            </div>   
-            <h1 class="ml6">
-              <span class="text-wrapper">
-                <span class="letters font-geologica whitespace-nowrap">MENU</span>
-              </span>
-            </h1>
+            <div className="flex flex-col justify-center items-start w-6 md:w-9 h-4 md:h-5 relative">
+              {/* Top line */}
+              <span
+                className='absolute left-0 w-full h-[2px] md:h-[2.5px] bg-black transition-all duration-300 ease-in-out'
+                style={{
+                  top: isHovered ? '50%' : '0',
+                  transform: isHovered ? 'translateY(-50%) rotate(-35deg) scaleX(0.6)' : 'none',
+                  transformOrigin: 'right center',
+                }}
+              />
+              {/* Middle line */}
+              <span
+                className='absolute left-0 top-1/2 -translate-y-1/2 h-[2px] md:h-[2.5px] bg-black transition-all duration-300 ease-in-out'
+                style={{ width: isHovered ? '60%' : '100%' }}
+              />
+              {/* Bottom line */}
+              <span
+                className='absolute left-0 w-full h-[2px] md:h-[2.5px] bg-black transition-all duration-300 ease-in-out'
+                style={{
+                  bottom: isHovered ? undefined : '0',
+                  top: isHovered ? '50%' : undefined,
+                  transform: isHovered ? 'translateY(-50%) rotate(35deg) scaleX(0.6)' : 'none',
+                  transformOrigin: 'right center',
+                }}
+              />
+            </div>
+            <span className="font-geologica leading-none">MENU</span>
           </button>
 
           {/* Clan Logo */}
@@ -150,30 +133,30 @@ const Navbar = () => {
             offset={-100}
             className='cursor-pointer hover:scale-110 hover:transform duration-200'
           >
-            <img src={logo} alt="Logo" className='h-14 sm:h-16 md:h-20 w-auto rounded-full border-4 border-black p-2 bg-[#f1f1f1] border-collapse'/>
+            <img src={logo} alt="Logo" className='h-12 sm:h-14 md:h-16 w-auto rounded-full border-2 border-black p-1.5 bg-[#f1f1f1]'/>
           </Link>
         </div>
       </nav>
 
       {isSideBarVisible && (
       <div
-        className={`fixed inset-0 z-50 bg-background w-screen h-screen bg-[#010101]  text-white transition-transform duration-700 mb-10 sm:mb-0 ${
+        className={`fixed inset-0 z-[100] bg-[#010101] text-white transition-transform duration-350 ${
           // isSideBarClosing ? True : False
           isSideBarClosing ? 'slide-up ' : 'slide-down'
         }`}  
       > 
-        <div className='flex flex-col w-full h-full item-start justify-between'>
+        <div className='flex flex-col w-full h-full justify-between'>
           <button
-                className="absolute top-10 right-10 text-7xl md:text-9xl hover:transform hover:scale-90 duration-500"
+                className="absolute top-6 right-6 md:top-10 md:right-10 text-4xl md:text-7xl cursor-pointer hover:scale-90 transition-transform duration-300"
                 onClick={closeSidebar}
             >
               ✕
             </button>
             <div className='flex h-full items-center'>
-              <ul className="space-y-2 text-start pl-10 font-geologica">
+              <ul className="space-y-1 md:space-y-2 text-start pl-6 md:pl-10 font-geologica">
                 {['HOME', 'ABOUT', 'WORK', 'CONTACT'].map((text, index) => (
-                  <li key={index} className="text-6xl md:text-9xl font-bold cursor-pointer hover:text-gray-300 transition">
-                    <Link to={text.toLowerCase()} smooth={true} duration={700} delay={700} onClick={closeSidebar}>
+                  <li key={index} className="text-4xl sm:text-6xl md:text-9xl font-bold cursor-pointer hover:text-gray-300 transition">
+                    <Link to={text.toLowerCase()} smooth={true} duration={700} delay={350} onClick={closeSidebar}>
                       <h1 className="ml11">
                         <span className="text-wrapper">
                           <span className="line line1"></span>
@@ -185,8 +168,8 @@ const Navbar = () => {
                 ))}
               </ul>
             </div>
-            <div 
-              className={`flex sm:flex-row text-end flex-col w-full justify-between px-10 pb-10 text-xl sm:text-3xl m-auto transition-opacity ease-in-out duration-[1000ms] ${
+            <div
+              className={`flex sm:flex-row text-end flex-col w-full justify-between px-6 md:px-10 pb-6 md:pb-10 text-base sm:text-xl md:text-3xl transition-opacity ease-in-out duration-[1000ms] ${
               isSocialVisible ? 'opacity-100' : 'opacity-0'
             }`}
             >

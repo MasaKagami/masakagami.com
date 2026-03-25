@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-geologica: 'Geologica', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-charm: 'Charm', sans-serif;
+}
 
 :root {
-    --background: #f1f1f1;
-    --foreground: #010101;
+    --background: #010101;
+    --foreground: #f1f1f1;
 }
 
 html, body {
@@ -33,43 +40,6 @@ html, body {
   animation: pulse 0.4s infinite;
 }
 
-/* menu button */
-  /* burger to arrow */
-.hamburger-label:hover .line1 {
-  transform: rotate(45deg) translate(1.05rem, -0.55rem) scaleX(0.75);
-}
-
-.hamburger-label:hover .line3 {
-  transform: rotate(-45deg) translate(1.05rem, 0.55rem) scaleX(0.75);
-}
-
-.hamburger-label:hover .line1-small {
-  transform: rotate(45deg) translate(0.78rem, -0.45rem) scaleX(0.55);
-}
-
-.hamburger-label:hover .line3-small {
-  transform: rotate(-45deg) translate(0.78rem, 0.45rem) scaleX(0.55);
-}
-
-
-  /* menu letter animation */
-.ml6 {
-  position: relative;
-}
-
-.ml6 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml6 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
 
 /* dropdown */
   /* text animation */
@@ -125,11 +95,11 @@ html, body {
 }
 
 .slide-down {
-  animation: slideDown 0.7s ease-out forwards;
+  animation: slideDown 0.35s ease-out forwards;
 }
 
 .slide-up {
-  animation: slideUp 0.7s ease-out forwards;
+  animation: slideUp 0.35s ease-out forwards;
 }
 
 /* techincal skills Section */

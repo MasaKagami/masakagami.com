@@ -67,8 +67,8 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" className="w-screen bg-[#010101]">
-      <div className="w-full xl:max-w-[90%] max-w-[90%] mx-auto min-h-screen flex flex-col py-20 md:py-32 overflow-x-hidden">
+    <section id="skills" className="w-full bg-[#010101]">
+      <div className="w-[90%] mx-auto min-h-screen flex flex-col py-20 md:py-32">
         <div className="w-full py-4 border-b-2">
           <p className="font-geologica text-3xl font-bold text-[#f1f1f1]">
             TECHNICAL SKILLS
