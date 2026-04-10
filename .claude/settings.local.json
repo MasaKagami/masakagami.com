@@ -6,7 +6,9 @@
       "Bash(npm run:*)",
       "Bash(grep -r \"circle\\\\|rounded-full\" /c/Users/nagam/Documents/GitHub/masakagami.com/portfolio/src/components --include=*.jsx --include=*.js)",
       "Bash(npx skills:*)",
-      "WebFetch(domain:mahmoudashrf.vercel.app)"
+      "WebFetch(domain:mahmoudashrf.vercel.app)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:www.z3ntra.com)"
     ]
   }
 }

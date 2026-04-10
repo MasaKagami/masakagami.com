@@ -1,18 +1,15 @@
 import Navbar from "./components/NavBar/navbar";
-// import Intro from "./components/intro/intro";
 import Intro from "./components/intro/intro";
 import Skills from "./components/Skills/skills";
 import Works from "./components/Works/works";
-// import Outro from "./components/outro/outro"
 import Footer from "./components/Footer/footer";
 import MusicRedirect from "./MusicRedirect";
-// import Contact from "./components/Contact/contact";
+import AboutPage from "./pages/AboutPage";
+import ExperiencePage from "./pages/ExperiencePage";
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import FadeInSection from "./components/fadeInSection/fadeInSection";
 import About from "./components/About/about";
-// import CursorLine from "./components/CursorLine/cursorLine"
 
 function App() {
 
@@ -20,6 +17,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/playlist" element={<MusicRedirect />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/*" element={
           <div className="App overflow-x-hidden">
             <Navbar/>

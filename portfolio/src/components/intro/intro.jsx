@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 
-const ROLLING_TEXT = 'crafting experiences that matter \u2014\u00A0';
+const ROLLING_TEXT = 'crafting interfaces that just work \u00A0\u00B7\u00A0';
 
 const ROLES = [
   'Product Developer',
@@ -59,8 +59,8 @@ const Intro = () => {
             &copy; {new Date().getFullYear()}
           </span>
           <nav className="flex flex-col gap-1 text-[var(--foreground)]" aria-label="Page navigation">
-            <Link to="about" smooth={true} duration={700} offset={-80} className="cursor-pointer hover:text-[var(--text-muted)] transition-colors duration-300">About</Link>
-            <Link to="work" smooth={true} duration={700} offset={-80} className="cursor-pointer hover:text-[var(--text-muted)] transition-colors duration-300">Work</Link>
+            <RouterLink to="/about" className="hover:text-[var(--text-muted)] transition-colors duration-300">About</RouterLink>
+            <RouterLink to="/experience" className="hover:text-[var(--text-muted)] transition-colors duration-300">Experience</RouterLink>
             <button type="button" className="text-left cursor-pointer hover:text-[var(--text-muted)] transition-colors duration-300" disabled>Contact</button>
           </nav>
           <div className="flex flex-col gap-1 text-[var(--foreground)]">
@@ -77,6 +77,19 @@ const Intro = () => {
         2. Dark text   — above border, BELOW image (image covers it)
         3. Image       — on top, with #f3f3f3 text masked inside
       */}
+
+      {/* Subtle bottom gradient — matches bottom text bar height */}
+      <div
+        className="absolute bottom-0 left-0 right-0 pointer-events-none"
+        style={{ background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.08))' }}
+        aria-hidden="true"
+      >
+        <div className="py-3 md:py-5">
+          <div className="font-poppins text-xs sm:text-sm md:text-base font-medium space-y-0.5 invisible px-6">
+            {ROLES.map((r) => <p key={r}>{r}</p>)}
+          </div>
+        </div>
+      </div>
 
       {/* 1. Border line */}
       <div className="absolute bottom-0 left-0 right-0 hero-bottom-reveal">
