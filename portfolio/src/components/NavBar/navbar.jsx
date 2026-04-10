@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../../../src/assets/kagami-logo.png'
 import { Link } from 'react-scroll';
 import anime from 'animejs/lib/anime.es.js';
 
 const Navbar = () => {
-  
   const [isSideBarVisible, setIsSideBarVisible] = useState(false);
   const [isSideBarClosing, setisSideBarClosing] = useState(false);
   const [isSocialVisible, setIsSocialVisible] = useState(false);
+  const [showMenuButton, setShowMenuButton] = useState(false);
 
-  // side-bar text animation
+  // Show circle button after scrolling past hero
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowMenuButton(window.scrollY > window.innerHeight * 0.85);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Sidebar text animation
   useEffect(() => {
     if (isSideBarVisible) {
       const initialDelay = 400;
@@ -67,104 +75,125 @@ const Navbar = () => {
               });
           }
         });
-        setTimeout(()=> {
+        setTimeout(() => {
           setIsSocialVisible(true);
         }, 4000);
-      }, initialDelay)
+      }, initialDelay);
     }
   }, [isSideBarVisible]);
 
-  const closeSidebar = () =>{
+  const closeSidebar = () => {
     setisSideBarClosing(true);
     setTimeout(() => {
       setIsSideBarVisible(false);
       setisSideBarClosing(false);
       setIsSocialVisible(false);
     }, 350);
-  }
+  };
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50">
-        <div className='flex justify-between gap-4 w-[90%] mt-10 mx-auto font-geologica items-center'>
-          
-          {/* Menu Button */}
-          <button
-            className='z-[500] group flex items-center gap-3 md:gap-4 rounded-full text-base md:text-2xl font-bold px-5 md:px-8 py-3 md:py-4 bg-[#f1f1f1] text-black border-2 border-black cursor-pointer hover:bg-black hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300'
-            onClick={() => setIsSideBarVisible(true)}
-          >
-            <div className="flex flex-col justify-between w-6 md:w-8 h-3.5 md:h-[18px]">
-              <span className='h-[2px] w-full bg-black rounded-full transition-all duration-300 group-hover:bg-white group-hover:w-3/5' />
-              <span className='h-[2px] w-full bg-black rounded-full transition-all duration-300 group-hover:bg-white' />
-              <span className='h-[2px] w-full bg-black rounded-full transition-all duration-300 group-hover:bg-white group-hover:w-3/5 self-end' />
-            </div>
-            <span className="font-geologica leading-none">MENU</span>
-          </button>
+      {/* ─── Floating Circle Menu Button ─── */}
+      <button
+        className={`fixed top-6 right-6 md:top-8 md:right-8 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[var(--overlay)] flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300 ${
+          showMenuButton ? 'menu-button-visible' : 'menu-button-hidden'
+        }`}
+        onClick={() => setIsSideBarVisible(true)}
+        aria-label="Open navigation menu"
+      >
+        <img
+          src="/logo/logo.svg"
+          alt=""
+          className="h-5 w-5 md:h-6 md:w-6 brightness-0 invert"
+          aria-hidden="true"
+        />
+      </button>
 
-          {/* Clan Logo */}
-          <Link 
-            to="home"
-            smooth={true}
-            duration={500}
-            offset={-100}
-            className='cursor-pointer hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] rounded-full transition-all duration-300'
-          >
-            <img src={logo} alt="Logo" className='h-12 sm:h-14 md:h-16 w-auto rounded-full border-2 border-black p-1.5 bg-[#f1f1f1]'/>
-          </Link>
-        </div>
-      </nav>
-
+      {/* ─── Full-Screen Overlay Menu ─── */}
       {isSideBarVisible && (
-      <div
-        className={`fixed inset-0 z-[100] bg-[#010101] text-white transition-transform duration-350 ${
-          // isSideBarClosing ? True : False
-          isSideBarClosing ? 'slide-up ' : 'slide-down'
-        }`}  
-      > 
-        <div className='flex flex-col w-full h-full justify-between'>
-          <button
-                className="absolute top-6 right-6 md:top-10 md:right-10 text-4xl md:text-7xl cursor-pointer hover:scale-90 transition-transform duration-300"
-                onClick={closeSidebar}
+        <div
+          className={`fixed inset-0 z-[100] bg-[var(--overlay)] text-[var(--background)] transition-transform duration-350 ${
+            isSideBarClosing ? 'slide-up' : 'slide-down'
+          }`}
+        >
+          <div className="flex flex-col w-full h-full justify-between">
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 md:top-10 md:right-10 text-4xl md:text-7xl cursor-pointer hover:scale-90 transition-transform duration-300 text-[var(--background)]"
+              onClick={closeSidebar}
+              aria-label="Close menu"
             >
-              ✕
+              &times;
             </button>
-            <div className='flex h-full items-center'>
-              <ul className="space-y-1 md:space-y-2 text-start pl-6 md:pl-10 font-geologica">
+
+            {/* Menu Items */}
+            <div className="flex h-full items-center">
+              <ul className="space-y-1 md:space-y-2 text-start pl-6 md:pl-10">
                 {['HOME', 'ABOUT', 'WORK', 'CONTACT'].map((text, index) => (
-                  <li key={index} className="text-4xl sm:text-6xl md:text-9xl font-bold cursor-pointer hover:text-gray-300 transition">
-                    <Link to={text.toLowerCase()} smooth={true} duration={700} delay={350} onClick={closeSidebar}>
-                      <h1 className="ml11">
+                  <li
+                    key={index}
+                    className="text-4xl sm:text-6xl md:text-9xl font-bold cursor-pointer hover:text-[#8c8c8c] transition-colors duration-300"
+                  >
+                    <Link
+                      to={text.toLowerCase()}
+                      smooth={true}
+                      duration={700}
+                      delay={350}
+                      onClick={closeSidebar}
+                    >
+                      <h2 className="ml11 font-lora">
                         <span className="text-wrapper">
                           <span className="line line1"></span>
-                          <span className="letters whitespace-nowrap font-geologica">{text}</span>
+                          <span className="letters whitespace-nowrap">
+                            {text}
+                          </span>
                         </span>
-                      </h1>
+                      </h2>
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
+
+            {/* Social Links */}
             <div
-              className={`flex sm:flex-row text-end flex-col w-full justify-between px-6 md:px-10 pb-6 md:pb-10 text-base sm:text-xl md:text-3xl transition-opacity ease-in-out duration-[1000ms] ${
-              isSocialVisible ? 'opacity-100' : 'opacity-0'
-            }`}
+              className={`flex sm:flex-row text-end flex-col w-full justify-between px-6 md:px-10 pb-6 md:pb-10 text-base sm:text-xl md:text-3xl font-poppins transition-opacity ease-in-out duration-[1000ms] ${
+                isSocialVisible ? 'opacity-100' : 'opacity-0'
+              }`}
             >
-              <a href="https://www.linkedin.com/in/nagamasa/" target="_blank" rel="noopener noreferrer">
-                <p className='font-geologica hover:text-gray-300 cursor-pointer'>LINKEDIN</p>
+              <a
+                href="https://www.linkedin.com/in/nagamasa/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="hover:text-[#8c8c8c] cursor-pointer transition-colors duration-300">
+                  LINKEDIN
+                </p>
               </a>
-              <a href="https://www.instagram.com/masakagami/" target="_blank" rel="noopener noreferrer">
-                <p className='font-geologica hover:text-gray-300 cursor-pointer'>INSTAGRAM</p>
+              <a
+                href="https://www.instagram.com/masakagami/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="hover:text-[#8c8c8c] cursor-pointer transition-colors duration-300">
+                  INSTAGRAM
+                </p>
               </a>
-              <a href="https://soundcloud.com/jodyekagami" target="_blank" rel="noopener noreferrer">
-                <p className='font-geologica hover:text-gray-300 cursor-pointer'>MY PLAYLISTS</p>
+              <a
+                href="https://soundcloud.com/jodyekagami"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="hover:text-[#8c8c8c] cursor-pointer transition-colors duration-300">
+                  MY PLAYLISTS
+                </p>
               </a>
             </div>
           </div>
-        
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,51 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
 
 @import "tailwindcss";
 @plugin "daisyui";
 @plugin "@tailwindcss/typography";
 
+/* ─── Design Tokens ─── */
 @theme {
+  --font-lora: 'Lora', serif;
+  --font-poppins: 'Poppins', sans-serif;
   --font-geologica: 'Geologica', sans-serif;
-  --font-sans: 'Inter', sans-serif;
-  --font-roboto: 'Roboto', sans-serif;
-  --font-charm: 'Charm', sans-serif;
 }
 
 :root {
-    --background: #010101;
-    --foreground: #f1f1f1;
+  --background: #f3f3f3;
+  --foreground: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6b6b6b;
+  --border: #d4d4d4;
+  --border-subtle: #e0e0e0;
+  --surface: #e8e8e8;
+  --overlay: #1a1a1a;
+}
+
+/* ─── Base Styles ─── */
+html {
+  scroll-behavior: smooth;
 }
 
 html, body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Geologica', 'Charm', 'Arial', 'Helvetica', 'sans-serif';
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+/* ─── Font Utilities ─── */
+.font-lora {
+  font-family: 'Lora', serif !important;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .font-geologica {
-  font-family: 'Geologica', sans-serif !important; /* Ensure specificity */
+  font-family: 'Geologica', sans-serif !important;
 }
 
-/* loading screen */
-@keyframes pulse {
-  0%, 100% {
+/* ─── Hero Animations ─── */
+
+/* Soft vertical reveal — text rises from below with gentle deceleration */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(clamp(16px, 3vh, 40px));
+    filter: blur(2px);
+  }
+  60% {
+    filter: blur(0);
+  }
+  to {
     opacity: 1;
+    transform: none;
+    filter: none;
   }
-  50% {
-    opacity: 0.5;
+}
+
+/* Name slides up from behind the overflow-hidden mask */
+@keyframes revealMaskUp {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
-.animate-pulse-1 {
-  animation: pulse 0.4s infinite;
+
+/* Slow fade with no movement — for background elements */
+@keyframes revealFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-
-/* dropdown */
-  /* text animation */
-.ml11 {
-
+/* Rolling text scroll */
+@keyframes textRoll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
+
+/*
+  Sequence:
+  1. Image — already visible, no animation
+  2. Rolling text — fades in while already scrolling (0.3s delay)
+  3. Logo + name — logo fades, letters cascade in (1.2s delay)
+  4. Top-right nav + bottom text — rise up together (1.8s delay)
+*/
+
+/* 1. Image: already visible */
+.hero-image-reveal {
+  opacity: 1;
+}
+
+/* 2. Rolling text: fades in while already scrolling */
+.rolling-text-wrapper {
+  animation: revealFade 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s forwards;
+  opacity: 0;
+}
+
+.rolling-text {
+  animation: textRoll 60s linear infinite;
+}
+
+/* 3. Logo: simple fade */
+.hero-logo-reveal {
+  animation: revealFade 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 1.2s forwards;
+  opacity: 0;
+}
+
+/* 3. Name: slides up from behind overflow mask */
+.hero-name-reveal {
+  transform: translateY(110%);
+  animation: revealMaskUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.35s forwards;
+}
+
+/* 4. Top-right nav: rise up */
+.hero-nav-reveal {
+  animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+  opacity: 0;
+}
+
+/* 4. Bottom text: rise up (same timing as nav) */
+.hero-bottom-reveal {
+  animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+  opacity: 0;
+}
+
+/* Stagger children inside nav/bottom for cascading feel */
+.hero-nav-reveal > *:nth-child(1) { animation-delay: 1.8s; }
+.hero-nav-reveal > *:nth-child(2) { animation-delay: 1.9s; }
+.hero-nav-reveal > *:nth-child(3) { animation-delay: 2.0s; }
+.hero-nav-reveal > *:nth-child(4) { animation-delay: 2.1s; }
+
+.hero-bottom-stagger > *:nth-child(1) { animation: revealUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards; opacity: 0; }
+.hero-bottom-stagger > *:nth-child(2) { animation: revealUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.9s forwards; opacity: 0; }
+.hero-bottom-stagger > *:nth-child(3) { animation: revealUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.0s forwards; opacity: 0; }
+
+/* ─── Grain Overlay ─── */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: overlay;
+  opacity: 0.4;
+}
+
+/* ─── Menu Button ─── */
+@keyframes menuButtonIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.menu-button-visible {
+  animation: menuButtonIn 0.4s ease-out forwards;
+}
+
+.menu-button-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ─── Overlay Menu Animations ─── */
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+.slide-down {
+  animation: slideDown 0.35s ease-out forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.35s ease-out forwards;
+}
+
+/* ─── Overlay Text Animation (Anime.js) ─── */
+.ml11 {}
 
 .ml11 .text-wrapper {
   position: relative;
@@ -61,12 +221,12 @@ html, body {
   left: 0;
   height: 100%;
   width: 3px;
-  background-color: #fff;
+  background-color: #f3f3f3;
   transform-origin: 0 50%;
 }
 
-.ml11 .line1 { 
-  top: 0; 
+.ml11 .line1 {
+  top: 0;
   left: 0;
 }
 
@@ -75,40 +235,13 @@ html, body {
   line-height: 1em;
 }
 
-/* dropdown animation */
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
-  }
-}
-
-.slide-down {
-  animation: slideDown 0.35s ease-out forwards;
-}
-
-.slide-up {
-  animation: slideUp 0.35s ease-out forwards;
-}
-
-/* techincal skills Section */
+/* ─── Skills Section (scramble text) ─── */
 .scramble-text {
   font-family: 'Roboto Mono', monospace;
   font-size: 0.875rem;
   line-height: 1.75rem;
   height: 1.75rem;
-  color: #fafafa;
+  color: var(--foreground);
   transition: color 0.3s ease;
   white-space: nowrap;
   overflow: hidden;
@@ -116,12 +249,10 @@ html, body {
 }
 
 .dud {
-  color: #757575;
+  color: var(--text-muted);
 }
 
-
-
-/* Project Section */
+/* ─── Project Section ─── */
 .project-item {
   position: relative;
   overflow: hidden;
@@ -136,7 +267,6 @@ html, body {
   position: relative;
   z-index: 50;
 }
-
 
 .arrow-right {
   transform: translateX(0);
@@ -171,4 +301,49 @@ html, body {
 .group:hover .arrow {
   transform: translateX(0);
   opacity: 1;
+}
+
+/* ─── Loading Screen ─── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-1 {
+  animation: pulse 0.4s infinite;
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-logo-reveal,
+  .hero-name-reveal,
+  .hero-nav-reveal,
+  .hero-image-reveal,
+  .hero-bottom-reveal,
+  .rolling-text-wrapper,
+  .menu-button-visible {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    filter: none;
+  }
+
+  .hero-bottom-stagger > * {
+    animation: none;
+    opacity: 1;
+  }
+
+  .rolling-text {
+    animation: textRoll 60s linear infinite;
+  }
+
+  .slide-down,
+  .slide-up {
+    animation-duration: 0.01ms;
+  }
 }

@@ -1,85 +1,162 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import TextParticleSystem from './TextParticleSystem';
+import React from 'react';
 import { Link } from 'react-scroll';
 
-const themes = [
-  { bg: '#000000' },
-  { bg: '#1b0dc6' },
-  { bg: '#FF0000' },
+const ROLLING_TEXT = 'crafting experiences that matter \u2014\u00A0';
+
+const ROLES = [
+  'Product Developer',
+  'UI/UX Developer',
+  'Frontend Developer',
 ];
 
 const Intro = () => {
-  const [themeIndex, setThemeIndex] = useState(0);
-  const textSets = useMemo(() => [
-    ['MASA KAGAMI', 'FRONTEND\nDEVELOPER'],
-    ['MASA KAGAMI', 'PRODUCT\nENGINEER'],
-    ['MASA KAGAMI', 'PARTNER\nAT Z3NTRA'],
-  ], []);
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setThemeIndex((i) => (i + 1) % themes.length);
-    }, 12000);
-    return () => clearInterval(id);
-  }, []);
-
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden">
-      <h1 className="sr-only">Nagamasa Kagami (Masa Kagami) — Frontend Developer & Product Engineer</h1>
+    <section
+      id="home"
+      className="relative w-full overflow-hidden h-[85vh] md:h-screen"
+      style={{ backgroundColor: 'var(--background)' }}
+    >
+      <h1 className="sr-only">
+        Nagamasa Kagami (Masa Kagami) — Frontend Developer &amp; Product Engineer
+      </h1>
 
-      {/* Background */}
-      <div
-        className="absolute inset-0 transition-colors duration-1000"
-        style={{ backgroundColor: themes[themeIndex].bg }}
-      />
-
-      {/* Particle text */}
-      <TextParticleSystem textSets={textSets} color="#ffffff" ballSize={3} interval={6000} />
-
-      {/* Bottom bar */}
-      <div className="absolute inset-x-0 bottom-0 z-10 flex justify-between items-end px-6 py-10 md:px-16">
-        <div className="hidden gap-4 sm:flex">
-          <a
-            href="https://drive.google.com/file/d/1tRL5ueUllPF28gNufx26mWrbscaLqoIU/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 text-lg font-medium hover:bg-white hover:text-black transition-colors duration-300 border border-white/30"
-          >
-            View Resume
-          </a>
-          <Link
-            to="work"
-            smooth={true}
-            duration={1000}
-            offset={-80}
-            className="cursor-pointer bg-white/10 backdrop-blur-sm text-white px-6 py-3 text-lg font-medium hover:bg-white hover:text-black transition-colors duration-300 border border-white/30"
-          >
-            Projects
-          </Link>
+      {/* ─── Rolling Background Text ─── */}
+      <div className="absolute inset-0 flex items-start pt-[25vh] md:pt-[20vh] overflow-hidden pointer-events-none select-none rolling-text-wrapper">
+        <div
+          className="rolling-text flex whitespace-nowrap font-lora text-[20vw] sm:text-[17vw] md:text-[14vw] leading-none tracking-[-0.03em] text-[var(--foreground)] opacity-[0.07]"
+          style={{ fontWeight: 400 }}
+          aria-hidden="true"
+        >
+          <span>{ROLLING_TEXT}</span>
+          <span>{ROLLING_TEXT}</span>
+          <span>{ROLLING_TEXT}</span>
+          <span>{ROLLING_TEXT}</span>
         </div>
-        <p className="text-sm sm:text-base text-white font-geologica">
-          DEVELOPER
-        </p>
       </div>
 
-      {/* Social links */}
-      <div className="fixed left-4 top-1/2 -translate-y-1/2 z-20 hidden lg:block">
-        <div className="flex flex-col gap-6">
-          <a href="https://github.com/masakagami" target="_blank" rel="noopener noreferrer" aria-label="Masa Kagami on GitHub" className="text-white bg-black/50 rounded-full p-[3px] hover:text-white transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+      {/* ─── Top Header (z-30, always above everything) ─── */}
+      <div className="relative z-30 max-w-7xl mx-auto px-6 md:px-10 pt-3 md:pt-5 flex justify-between items-start">
+        <div className="flex items-center gap-2 md:gap-3">
+          <img
+            src="/logo/logo.svg"
+            alt=""
+            className="h-7 md:h-9 w-auto hero-logo-reveal"
+            draggable={false}
+            aria-hidden="true"
+          />
+          <div className="overflow-hidden py-1">
+            <span
+              className="font-lora text-2xl md:text-4xl leading-normal tracking-wide text-[var(--foreground)] block hero-name-reveal"
+              style={{ fontWeight: 500 }}
+            >
+              Masa Kagami
+            </span>
+          </div>
+        </div>
+
+        <div className="hidden sm:flex items-start gap-8 md:gap-12 font-poppins text-xs sm:text-sm md:text-base font-medium hero-nav-reveal">
+          <span className="text-[var(--text-muted)] pt-0.5">
+            &copy; {new Date().getFullYear()}
+          </span>
+          <nav className="flex flex-col gap-1 text-[var(--foreground)]" aria-label="Page navigation">
+            <Link to="about" smooth={true} duration={700} offset={-80} className="cursor-pointer hover:text-[var(--text-muted)] transition-colors duration-300">About</Link>
+            <Link to="work" smooth={true} duration={700} offset={-80} className="cursor-pointer hover:text-[var(--text-muted)] transition-colors duration-300">Work</Link>
+            <button type="button" className="text-left cursor-pointer hover:text-[var(--text-muted)] transition-colors duration-300" disabled>Contact</button>
+          </nav>
+          <div className="flex flex-col gap-1 text-[var(--foreground)]">
+            <a href="https://www.linkedin.com/in/nagamasa/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-muted)] transition-colors duration-300">LinkedIn</a>
+            <a href="https://github.com/masakagami" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-muted)] transition-colors duration-300">Github</a>
+            <a href="https://www.instagram.com/masakagami/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-muted)] transition-colors duration-300">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      {/*
+        Stacking via DOM order (no z-index on these three):
+        1. Border      — lowest
+        2. Dark text   — above border, BELOW image (image covers it)
+        3. Image       — on top, with #f3f3f3 text masked inside
+      */}
+
+      {/* 1. Border line */}
+      <div className="absolute bottom-0 left-0 right-0 hero-bottom-reveal">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="border-t border-[var(--border)]" />
+          <div className="py-3 md:py-5">
+            <div className="font-poppins text-xs sm:text-sm md:text-base font-medium space-y-0.5 invisible" aria-hidden="true">
+              {ROLES.map((r) => <p key={r}>{r}</p>)}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. Dark text — image will cover this where they overlap */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <div className="hero-bottom-reveal">
+          <div className="max-w-7xl mx-auto px-6 md:px-10">
+            <div className="flex justify-between items-start py-3 md:py-5">
+              <div className="font-poppins text-xs sm:text-sm md:text-base font-medium space-y-0.5 text-[var(--foreground)] hero-bottom-stagger">
+                {ROLES.map((r) => <p key={r}>{r}</p>)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. Image + light text masked to image alpha */}
+      <div className="absolute bottom-0 inset-x-0 flex justify-center items-end hero-image-reveal">
+        <div className="relative w-[480px] sm:w-[600px] md:w-[780px] lg:w-[950px]">
+          <img
+            src="/image/masa-images/masa-image.webp"
+            alt="Masa Kagami"
+            draggable={false}
+            className="w-full h-auto object-cover grayscale brightness-[0.65]"
+          />
+          {/* Grain overlay */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              WebkitMaskImage: 'url(/image/masa-images/masa-image.webp)',
+              maskImage: 'url(/image/masa-images/masa-image.webp)',
+              WebkitMaskSize: '100% 100%',
+              maskSize: '100% 100%',
+              WebkitMaskRepeat: 'no-repeat',
+              maskRepeat: 'no-repeat',
+            }}
+          >
+            <svg className="w-full h-full mix-blend-overlay opacity-40" aria-hidden="true">
+              <filter id="hero-grain">
+                <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+              </filter>
+              <rect width="100%" height="100%" filter="url(#hero-grain)" />
             </svg>
-          </a>
-          <a href="https://linkedin.com/in/nagamasa" target="_blank" rel="noopener noreferrer" aria-label="Nagamasa Kagami on LinkedIn" className="text-white bg-black/50 rounded p-[3px] hover:text-white transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-            </svg>
-          </a>
-          <a href="mailto:nagamasakagami@gmail.com" aria-label="Email Masa Kagami" className="text-white bg-black/50 rounded py-[1px] px-[3px] hover:text-white transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-            </svg>
-          </a>
+          </div>
+
+          {/* #f3f3f3 text — masked to image alpha, only visible on the photo */}
+          <div
+            className="absolute inset-0 overflow-hidden pointer-events-none"
+            style={{
+              WebkitMaskImage: 'url(/image/masa-images/masa-image.webp)',
+              maskImage: 'url(/image/masa-images/masa-image.webp)',
+              WebkitMaskSize: '100% 100%',
+              maskSize: '100% 100%',
+              WebkitMaskRepeat: 'no-repeat',
+              maskRepeat: 'no-repeat',
+            }}
+            aria-hidden="true"
+          >
+            <div className="absolute bottom-0 left-1/2 -ml-[50vw] w-[100vw]">
+              <div className="hero-bottom-reveal">
+                <div className="max-w-7xl mx-auto px-6 md:px-10">
+                  <div className="flex justify-between items-start py-3 md:py-5">
+                    <div className="font-poppins text-xs sm:text-sm md:text-base font-medium space-y-0.5 text-[#f3f3f3] hero-bottom-stagger">
+                      {ROLES.map((r) => <p key={r}>{r}</p>)}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
