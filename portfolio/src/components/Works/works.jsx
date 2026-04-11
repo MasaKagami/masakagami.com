@@ -4,20 +4,20 @@ import { ArrowUpRight } from 'lucide-react';
 
 const PROJECTS = [
   {
-    name: 'Z3ntra',
-    category: 'Landing Page',
-    services: 'Design & Development',
-    year: '2026',
-    image: '/image/thumbnails/z3ntra.png',
-    link: 'https://www.z3ntra.com/',
-  },
-  {
     name: 'PromptShop',
     category: 'Startup',
     services: 'Product Development',
     year: '2026',
     image: '/image/thumbnails/promptshop.png',
     link: 'https://promptshop.co',
+  },
+  {
+    name: 'Z3ntra',
+    category: 'Landing Page',
+    services: 'Design & Development',
+    year: '2026',
+    image: '/image/thumbnails/z3ntra.png',
+    link: 'https://www.z3ntra.com/',
   },
   {
     name: 'Link Affiliates',

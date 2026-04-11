@@ -54,6 +54,16 @@ const Intro = () => {
           </div>
         </div>
 
+        <button
+          type="button"
+          className="sm:hidden flex items-center gap-2 font-poppins text-sm font-medium text-[var(--foreground)] cursor-pointer hero-nav-reveal pt-2"
+          onClick={() => window.dispatchEvent(new Event('open-nav-menu'))}
+          aria-label="Open menu"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-[var(--foreground)]" />
+          Menu
+        </button>
+
         <div className="hidden sm:flex items-start gap-8 md:gap-12 font-poppins text-xs sm:text-sm md:text-base font-medium hero-nav-reveal">
           <span className="text-[var(--text-muted)] pt-0.5">
             &copy; {new Date().getFullYear()}
@@ -61,7 +71,13 @@ const Intro = () => {
           <nav className="flex flex-col gap-1 text-[var(--foreground)]" aria-label="Page navigation">
             <RouterLink to="/about" className="hover:text-[var(--text-muted)] transition-colors duration-300">About</RouterLink>
             <RouterLink to="/experience" className="hover:text-[var(--text-muted)] transition-colors duration-300">Experience</RouterLink>
-            <button type="button" className="text-left cursor-pointer hover:text-[var(--text-muted)] transition-colors duration-300" disabled>Contact</button>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event('open-contact-form'))}
+              className="text-left cursor-pointer hover:text-[var(--text-muted)] transition-colors duration-300"
+            >
+              Contact
+            </button>
           </nav>
           <div className="flex flex-col gap-1 text-[var(--foreground)]">
             <a href="https://www.linkedin.com/in/nagamasa/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-muted)] transition-colors duration-300">LinkedIn</a>
@@ -118,7 +134,7 @@ const Intro = () => {
 
       {/* 3. Image + light text masked to image alpha */}
       <div className="absolute bottom-0 inset-x-0 flex justify-center items-end hero-image-reveal">
-        <div className="relative w-[480px] sm:w-[600px] md:w-[780px] lg:w-[950px]">
+        <div className="relative w-[480px] sm:w-[600px] md:w-[680px] lg:w-[760px] xl:w-[860px] 2xl:w-[950px]">
           <img
             src="/image/masa-images/masa-image.webp"
             alt="Masa Kagami"

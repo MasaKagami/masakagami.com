@@ -6,7 +6,7 @@ const MENU_ITEMS = [
   { label: 'Home', type: 'scroll', to: 'home' },
   { label: 'About', type: 'route', to: '/about' },
   { label: 'Experience', type: 'route', to: '/experience' },
-  { label: 'Contact', type: 'scroll', to: 'contact' },
+  { label: 'Contact', type: 'action', to: 'contact' },
 ];
 
 const SOCIALS = [
@@ -39,6 +39,13 @@ const Navbar = ({ scrollThreshold }) => {
     }
     return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
+
+  // External trigger from page headers
+  useEffect(() => {
+    const handler = () => setIsOpen(true);
+    window.addEventListener('open-nav-menu', handler);
+    return () => window.removeEventListener('open-nav-menu', handler);
+  }, []);
 
   const close = () => {
     setIsClosing(true);
@@ -113,6 +120,20 @@ const Navbar = ({ scrollThreshold }) => {
                             {item.label}
                           </span>
                         </ScrollLink>
+                      ) : item.type === 'action' ? (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            close();
+                            setTimeout(() => window.dispatchEvent(new Event('open-contact-form')), 500);
+                          }}
+                          className="group flex items-center gap-4 cursor-pointer text-left"
+                        >
+                          <span className="font-poppins text-xs text-[#555] w-8 font-medium">0{i + 1}</span>
+                          <span className="font-poppins text-5xl sm:text-6xl md:text-8xl font-medium text-[var(--background)] group-hover:text-[#666] transition-colors duration-300">
+                            {item.label}
+                          </span>
+                        </button>
                       ) : (
                         <RouterLink
                           to={item.to}

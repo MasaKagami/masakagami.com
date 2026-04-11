@@ -3,6 +3,7 @@ import Intro from "./components/intro/intro";
 import Skills from "./components/Skills/skills";
 import Works from "./components/Works/works";
 import Footer from "./components/Footer/footer";
+import ContactForm from "./components/Contact/ContactForm";
 import MusicRedirect from "./MusicRedirect";
 import AboutPage from "./pages/AboutPage";
 import ExperiencePage from "./pages/ExperiencePage";
@@ -30,6 +31,7 @@ function App() {
           </div>
         } />
       </Routes>
+      <ContactForm />
     </Router>
   );
 }

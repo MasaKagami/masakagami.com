@@ -34,6 +34,21 @@ html, body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 ::selection {
@@ -247,6 +262,108 @@ html, body {
   opacity: 1;
 }
 
+/* ─── Contact Form ─── */
+@keyframes contactBackdropIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+}
+
+@keyframes contactBackdropOut {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  to {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+  }
+}
+
+.contact-portal .contact-backdrop {
+  background: rgba(243, 243, 243, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.contact-portal.is-opening .contact-backdrop {
+  animation: contactBackdropIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.contact-portal.is-closing .contact-backdrop {
+  animation: contactBackdropOut 0.35s cubic-bezier(0.7, 0, 0.84, 0) forwards;
+}
+
+@keyframes contactPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(32px) scale(0.98);
+    filter: blur(6px);
+  }
+  60% {
+    filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: none;
+  }
+}
+
+@keyframes contactPanelOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+.contact-portal.is-opening .contact-panel {
+  animation: contactPanelIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+  transform-origin: bottom center;
+  will-change: transform, opacity, filter;
+}
+
+.contact-portal.is-closing .contact-panel {
+  animation: contactPanelOut 0.35s cubic-bezier(0.7, 0, 0.84, 0) forwards;
+}
+
+@media (min-width: 768px) {
+  .contact-portal.is-opening .contact-panel {
+    transform-origin: bottom right;
+  }
+}
+
+/* Form fields stagger in after panel lands */
+@keyframes contactFieldIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.contact-portal.is-opening .contact-field {
+  opacity: 0;
+  animation: contactFieldIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--field-delay, 0.2s);
+}
+
 /* ─── Skills Section (scramble text) ─── */
 .scramble-text {
   font-family: 'Roboto Mono', monospace;
@@ -382,5 +499,16 @@ html, body {
   .slide-down,
   .slide-up {
     animation-duration: 0.01ms;
+  }
+
+  .contact-portal.is-opening .contact-backdrop,
+  .contact-portal.is-closing .contact-backdrop,
+  .contact-portal.is-opening .contact-panel,
+  .contact-portal.is-closing .contact-panel,
+  .contact-portal.is-opening .contact-field {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
   }
 }

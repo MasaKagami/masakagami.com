@@ -26,7 +26,7 @@ const EXPERIENCE = [
     link: null,
   },
   {
-    role: 'Frontend Developer',
+    role: 'Web Development Contractor',
     company: 'Link Affiliates',
     period: '2025',
     description: 'Contracted frontend developer for a marketing agency, building responsive web experiences for their clients. Developed landing pages and marketing sites using Next.js and Tailwind CSS.',
@@ -90,6 +90,16 @@ const ExperiencePage = () => {
           </span>
         </Link>
 
+        <button
+          type="button"
+          className="sm:hidden flex items-center gap-2 font-poppins text-sm font-medium text-[var(--foreground)] cursor-pointer pt-2"
+          onClick={() => window.dispatchEvent(new Event('open-nav-menu'))}
+          aria-label="Open menu"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-[var(--foreground)]" />
+          Menu
+        </button>
+
         <div className="hidden sm:flex items-start gap-8 md:gap-12 font-poppins text-xs sm:text-sm md:text-base font-medium">
           <span className="text-[var(--text-muted)] pt-0.5">
             &copy; {new Date().getFullYear()}
@@ -97,7 +107,13 @@ const ExperiencePage = () => {
           <nav className="flex flex-col gap-1 text-[var(--foreground)]" aria-label="Page navigation">
             <Link to="/" className="hover:text-[var(--text-muted)] transition-colors duration-300">Home</Link>
             <Link to="/about" className="hover:text-[var(--text-muted)] transition-colors duration-300">About</Link>
-            <button type="button" className="text-left cursor-pointer hover:text-[var(--text-muted)] transition-colors duration-300" disabled>Contact</button>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event('open-contact-form'))}
+              className="text-left cursor-pointer hover:text-[var(--text-muted)] transition-colors duration-300"
+            >
+              Contact
+            </button>
           </nav>
           <div className="flex flex-col gap-1 text-[var(--foreground)]">
             <a href="https://www.linkedin.com/in/nagamasa/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-muted)] transition-colors duration-300">LinkedIn</a>

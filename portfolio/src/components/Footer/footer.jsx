@@ -24,7 +24,13 @@ const Footer = () => {
               <span className="text-[var(--text-muted)] text-xs uppercase tracking-wider mb-1">Menu</span>
               <Link to="/about" className="text-[var(--foreground)] hover:text-[var(--text-muted)] transition-colors duration-300">About</Link>
               <Link to="/experience" className="text-[var(--foreground)] hover:text-[var(--text-muted)] transition-colors duration-300">Experience</Link>
-              <button type="button" className="text-left text-[var(--foreground)] hover:text-[var(--text-muted)] transition-colors duration-300 cursor-pointer" disabled>Contact</button>
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new Event('open-contact-form'))}
+                className="text-left text-[var(--foreground)] hover:text-[var(--text-muted)] transition-colors duration-300 cursor-pointer"
+              >
+                Contact
+              </button>
             </div>
 
             {/* Social */}
