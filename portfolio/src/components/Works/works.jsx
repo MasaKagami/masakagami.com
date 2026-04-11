@@ -123,7 +123,10 @@ const Works = () => {
                 style={{
                   opacity: hoveredIndex !== null && hoveredIndex !== index ? 0.35 : 1,
                 }}
-                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseEnter={(e) => {
+                  setMousePos({ x: e.clientX, y: e.clientY });
+                  setHoveredIndex(index);
+                }}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 {/* Desktop layout */}

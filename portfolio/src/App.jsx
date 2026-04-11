@@ -4,6 +4,7 @@ import Skills from "./components/Skills/skills";
 import Works from "./components/Works/works";
 import Footer from "./components/Footer/footer";
 import ContactForm from "./components/Contact/ContactForm";
+import ScrollToTop from "./components/ScrollToTop";
 import MusicRedirect from "./MusicRedirect";
 import AboutPage from "./pages/AboutPage";
 import ExperiencePage from "./pages/ExperiencePage";
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/playlist" element={<MusicRedirect />} />
         <Route path="/about" element={<AboutPage />} />
