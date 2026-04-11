@@ -103,7 +103,7 @@ const Works = () => {
         <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr_0.5fr] gap-4 pb-4 border-b border-[var(--border)]">
           <span className="font-poppins text-xs uppercase tracking-wider text-[var(--text-muted)]">Project</span>
           <span className="font-poppins text-xs uppercase tracking-wider text-[var(--text-muted)]">Category</span>
-          <span className="font-poppins text-xs uppercase tracking-wider text-[var(--text-muted)]">Services</span>
+          <span className="font-poppins text-xs uppercase tracking-wider text-[var(--text-muted)]">Scope</span>
           <span className="font-poppins text-xs uppercase tracking-wider text-[var(--text-muted)] text-right">Year</span>
         </div>
 

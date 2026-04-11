@@ -8,7 +8,7 @@ const EXPERIENCE = [
     role: 'UI/UX & Product Developer',
     company: 'PromptShop',
     period: '2026 — Present',
-    description: 'Leading UI/UX and product development for an AI prompt marketplace. Designing and building out page interfaces, establishing the foundation for AI agent interactions, and managing a team of graphic and web designers.',
+    description: 'Leading UI/UX for a startup building AI agents for the food and beverage industry, while contributing to product development across the team. Designing and building out page interfaces, helping shape AI agent interactions, and managing a team of graphic and web designers.',
     link: 'https://promptshop.co',
   },
   {
