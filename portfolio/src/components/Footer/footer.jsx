@@ -24,6 +24,7 @@ const Footer = () => {
               <span className="text-[var(--text-muted)] text-xs uppercase tracking-wider mb-1">Menu</span>
               <Link to="/about" className="text-[var(--foreground)] hover:text-[var(--text-muted)] transition-colors duration-300">About</Link>
               <Link to="/experience" className="text-[var(--foreground)] hover:text-[var(--text-muted)] transition-colors duration-300">Experience</Link>
+              <a href="https://drive.google.com/file/d/1y3IBrguRgR5Gvd8TdXDwxqd7mwwclQnm/view" target="_blank" rel="noopener noreferrer" className="text-[var(--foreground)] hover:text-[var(--text-muted)] transition-colors duration-300">Resume</a>
               <button
                 type="button"
                 onClick={() => window.dispatchEvent(new Event('open-contact-form'))}
