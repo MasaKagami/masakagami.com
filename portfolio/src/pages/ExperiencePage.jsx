@@ -15,21 +15,21 @@ const EXPERIENCE = [
     role: 'UI/UX & Product Developer',
     company: 'PromptShop',
     period: 'Jan 2026 — Apr 2026',
-    description: 'Led the UI/UX for a startup building AI agents for the food and beverage industry, while contributing to product development across the team. Designed and built out page interfaces, helped shape AI agent interactions, and managed a team of graphic and web designers.',
+    description: 'Led UI/UX product decisions and frontend implementation for an AI-agent startup serving the food and beverage industry. Built and shipped all web pages and core product surfaces in Next.js and Tailwind CSS. Structured and built AI agents on the frontend, owning their conversational flows and interaction patterns end-to-end. Managed a cross-functional team of graphic and web designers.',
     link: 'https://promptshop.co',
   },
   {
     role: 'Sales Engineer',
     company: 'Famic Technologies',
     period: 'May — Oct 2025',
-    description: 'Led the Japan market team, managing distributor relationships and representing the company at trade shows across Japan. Met with prospective and existing clients to deliver product demos, bridging technical engineering knowledge with client-facing sales.',
+    description: 'Solely managed the Japan market, owning distributor relationships and representing the company at trade shows across Japan. Delivered technical product demos to prospective and existing clients, bridging engineering depth with client-facing sales. Contributed to the Japanese interface of the company\'s software solution.',
     link: null,
   },
   {
-    role: 'Web Development Contractor',
+    role: 'Web Developer',
     company: 'Link Affiliates',
     period: 'Feb — Aug 2025',
-    description: 'Contracted frontend developer for a marketing agency, building responsive web experiences for their clients. Developed landing pages and marketing sites using Next.js and Tailwind CSS.',
+    description: 'Built and revamped responsive landing pages and marketing sites for a marketing agency\'s clients using Next.js and Tailwind CSS. Integrated client-facing features including a meeting scheduler and optimized SEO and load performance.',
     link: 'https://www.linkaffiliates.ca/',
   },
   {
@@ -114,6 +114,7 @@ const ExperiencePage = () => {
           <nav className="flex flex-col gap-1 text-[var(--foreground)]" aria-label="Page navigation">
             <Link to="/" className="hover:text-[var(--text-muted)] transition-colors duration-300">Home</Link>
             <Link to="/about" className="hover:text-[var(--text-muted)] transition-colors duration-300">About</Link>
+            <a href="https://drive.google.com/file/d/1y3IBrguRgR5Gvd8TdXDwxqd7mwwclQnm/view" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-muted)] transition-colors duration-300">Resume</a>
             <button
               type="button"
               onClick={() => window.dispatchEvent(new Event('open-contact-form'))}

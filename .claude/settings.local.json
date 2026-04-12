@@ -9,7 +9,12 @@
       "WebFetch(domain:mahmoudashrf.vercel.app)",
       "WebFetch(domain:www.linkedin.com)",
       "WebFetch(domain:www.z3ntra.com)",
-      "Bash(ls -la C:/Users/nagam/Documents/GitHub/masakagami.com/portfolio/.env*)"
+      "Bash(ls -la C:/Users/nagam/Documents/GitHub/masakagami.com/portfolio/.env*)",
+      "Bash(pip show:*)",
+      "Bash(npm list:*)",
+      "Bash(pip --version)",
+      "Bash(pip3 --version)",
+      "Skill(humanizer)"
     ]
   }
 }

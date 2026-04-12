@@ -94,6 +94,7 @@ const AboutPage = () => {
           <nav className="flex flex-col gap-1 text-[var(--foreground)]" aria-label="Page navigation">
             <Link to="/" className="hover:text-[var(--text-muted)] transition-colors duration-300">Home</Link>
             <Link to="/experience" className="hover:text-[var(--text-muted)] transition-colors duration-300">Experience</Link>
+            <a href="https://drive.google.com/file/d/1y3IBrguRgR5Gvd8TdXDwxqd7mwwclQnm/view" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-muted)] transition-colors duration-300">Resume</a>
             <button
               type="button"
               onClick={() => window.dispatchEvent(new Event('open-contact-form'))}

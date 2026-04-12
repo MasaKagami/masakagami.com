@@ -6,6 +6,7 @@ const MENU_ITEMS = [
   { label: 'Home', type: 'scroll', to: 'home' },
   { label: 'About', type: 'route', to: '/about' },
   { label: 'Experience', type: 'route', to: '/experience' },
+  { label: 'Resume', type: 'external', to: 'https://drive.google.com/file/d/1y3IBrguRgR5Gvd8TdXDwxqd7mwwclQnm/view' },
   { label: 'Contact', type: 'action', to: 'contact' },
 ];
 
@@ -120,6 +121,19 @@ const Navbar = ({ scrollThreshold }) => {
                             {item.label}
                           </span>
                         </ScrollLink>
+                      ) : item.type === 'external' ? (
+                        <a
+                          href={item.to}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={close}
+                          className="group flex items-center gap-4"
+                        >
+                          <span className="font-poppins text-xs text-[#555] w-8 font-medium">0{i + 1}</span>
+                          <span className="font-poppins text-5xl sm:text-6xl md:text-8xl font-medium text-[var(--background)] group-hover:text-[#666] transition-colors duration-300">
+                            {item.label}
+                          </span>
+                        </a>
                       ) : item.type === 'action' ? (
                         <button
                           type="button"

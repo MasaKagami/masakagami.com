@@ -71,6 +71,7 @@ const Intro = () => {
           <nav className="flex flex-col gap-1 text-[var(--foreground)]" aria-label="Page navigation">
             <RouterLink to="/about" className="hover:text-[var(--text-muted)] transition-colors duration-300">About</RouterLink>
             <RouterLink to="/experience" className="hover:text-[var(--text-muted)] transition-colors duration-300">Experience</RouterLink>
+            <a href="https://drive.google.com/file/d/1y3IBrguRgR5Gvd8TdXDwxqd7mwwclQnm/view" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-muted)] transition-colors duration-300">Resume</a>
             <button
               type="button"
               onClick={() => window.dispatchEvent(new Event('open-contact-form'))}
