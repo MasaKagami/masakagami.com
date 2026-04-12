@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "animejs": "^3.2.2",
     "cannon-es": "^0.20.0",
     "framer-motion": "^12.38.0",

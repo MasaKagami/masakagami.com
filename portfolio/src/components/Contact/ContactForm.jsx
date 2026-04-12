@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const ContactForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const handler = () => setIsOpen(true);
@@ -33,18 +40,45 @@ const ContactForm = () => {
     setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
+      setStatus('idle');
+      setErrorMessage('');
     }, 350);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    );
-    window.location.href = `mailto:nagamasakagami@gmail.com?subject=${subject}&body=${body}`;
-    setForm({ name: '', email: '', message: '' });
-    close();
+    if (status === 'sending') return;
+
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      setStatus('error');
+      setErrorMessage('Email service is not configured.');
+      return;
+    }
+
+    setStatus('sending');
+    setErrorMessage('');
+
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+          reply_to: form.email,
+        },
+        { publicKey: PUBLIC_KEY }
+      );
+      setStatus('success');
+      setForm({ name: '', email: '', message: '' });
+      setTimeout(() => close(), 1600);
+    } catch (err) {
+      setStatus('error');
+      setErrorMessage(
+        err?.text || 'Something went wrong. Please try again or email directly.'
+      );
+    }
   };
 
   if (!isOpen) return null;
@@ -123,10 +157,18 @@ const ContactForm = () => {
           <div className="contact-field" style={{ '--field-delay': '0.42s' }}>
             <button
               type="submit"
-              className="contact-submit mt-7 w-full bg-[var(--foreground)] text-[var(--background)] font-poppins text-sm font-medium py-3.5 hover:bg-[var(--text-secondary)] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+              disabled={status === 'sending' || status === 'success'}
+              className="contact-submit mt-7 w-full bg-[var(--foreground)] text-[var(--background)] font-poppins text-sm font-medium py-3.5 hover:bg-[var(--text-secondary)] active:scale-[0.98] transition-all duration-300 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Send message
+              {status === 'sending' && 'Sending...'}
+              {status === 'success' && 'Message sent'}
+              {(status === 'idle' || status === 'error') && 'Send message'}
             </button>
+            {status === 'error' && (
+              <p className="mt-3 font-poppins text-xs text-red-500" role="alert">
+                {errorMessage}
+              </p>
+            )}
           </div>
         </form>
       </div>
