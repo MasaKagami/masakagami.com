@@ -4,32 +4,25 @@ import Footer from '../components/Footer/footer';
 import Navbar from '../components/NavBar/navbar';
 
 const EXPERIENCE = [
-  {
-    role: 'Partner & Product Developer',
-    company: 'Z3NTRA',
-    period: 'Mar 2026 — Present',
-    description: 'Developer at an end-to-end software development firm that ships scalable, production-ready solutions for startups and brands. Handling frontend development, UI/UX design, and client-facing product strategy across web, mobile, and AI projects.',
-    link: 'https://www.z3ntra.com/',
-  },
-  {
+{
     role: 'UI/UX & Product Developer',
     company: 'PromptShop',
     period: 'Jan 2026 — Apr 2026',
-    description: 'Led UI/UX product decisions and frontend implementation for an AI-agent startup serving the food and beverage industry. Built and shipped all web pages and core product surfaces in Next.js and Tailwind CSS. Structured and built AI agents on the frontend, owning their conversational flows and interaction patterns end-to-end. Managed a cross-functional team of graphic and web designers.',
+    description: 'Joined pre-product and led all UI/UX and frontend development for a VC-backed AI startup serving the food and beverage industry. Built the marketing site, product pages, and frontend for four production AI agents in Next.js and Tailwind CSS. Platform grew to 1,300+ stores and 500+ agencies actively using it by departure.',
     link: 'https://promptshop.co',
   },
   {
     role: 'Sales Engineer',
     company: 'Famic Technologies',
     period: 'May — Oct 2025',
-    description: 'Solely managed the Japan market, owning distributor relationships and representing the company at trade shows across Japan. Delivered technical product demos to prospective and existing clients, bridging engineering depth with client-facing sales. Contributed to the Japanese interface of the company\'s software solution.',
+    description: 'Managed the Japan market within a 3-person Asia team, owning distributor relationships and representing the company at CSPI-EXPO 2025 in Chiba, Japan. Delivered in-person technical demos and training at client headquarters across Japan. Translated the full Japanese interface of the company\'s flagship software.',
     link: null,
   },
   {
     role: 'Web Developer',
     company: 'Link Affiliates',
     period: 'Feb — Aug 2025',
-    description: 'Built and revamped responsive landing pages and marketing sites for a marketing agency\'s clients using Next.js and Tailwind CSS. Integrated client-facing features including a meeting scheduler and optimized SEO and load performance.',
+    description: 'Built and revamped client sites for Vancouver-based SMBs in Next.js and Tailwind CSS, achieving a Lighthouse SEO score of 100. Shipped a Meta Ads landing page for a Hong Kong-based client that drove a 140% increase in web traffic.',
     link: 'https://www.linkaffiliates.ca/',
   },
   {
@@ -42,15 +35,15 @@ const EXPERIENCE = [
   {
     role: 'Lead Frontend Developer',
     company: 'Empor',
-    period: 'Jul 2024 — Nov 2025',
-    description: 'Led frontend development for a student-exclusive marketplace platform serving 1,000+ university students. Built with Next.js, TypeScript, and Tailwind CSS. Collaborated on backend integration with Prisma and handled UI/UX prototyping in Figma.',
+    period: 'Jul 2024 — May 2025',
+    description: 'Joined pre-product and led frontend development for a student marketplace that grew to 1,000+ users. Built every page across desktop and mobile in Next.js, TypeScript, and Tailwind CSS, shipping search, listings, authentication, real-time messaging, and Stripe checkout.',
     link: null,
   },
   {
     role: 'Summer Analyst',
     company: 'Cyest Corporation',
     period: 'Jun — Aug 2023',
-    description: 'Researched and published six white papers on industry trends, startup ecosystems, ESG, and leadership for a Tokyo-based consulting firm. Facilitated cross-functional workshops and client strategy sessions for startup clients.',
+    description: 'Published six white papers on startup ecosystems, ESG trends, and leadership for a Tokyo-based consulting firm, distributed to Japanese clients pursuing international expansion. Facilitated five strategy workshops.',
     link: null,
   },
   {
