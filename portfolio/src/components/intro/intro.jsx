@@ -5,7 +5,7 @@ const ROLLING_TEXT = 'crafting interfaces that just work \u00A0\u00B7\u00A0';
 
 const ROLES = [
   'Product Developer',
-  'UI/UX Developer',
+  'Technical Sales',
   'Frontend Developer',
 ];
 
