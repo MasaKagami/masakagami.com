@@ -5,14 +5,14 @@ import Navbar from '../components/NavBar/navbar';
 
 const EXPERIENCE = [
 {
-    role: 'UI/UX & Product Developer',
-    company: 'PromptShop',
+    role: 'Frontend Developer',
+    company: 'Meuze',
     period: 'Jan 2026 — Apr 2026',
     description: 'Joined pre-product and led all UI/UX and frontend development for a VC-backed AI startup serving the food and beverage industry. Built the marketing site, product pages, and frontend for four production AI agents in Next.js and Tailwind CSS. Platform grew to 1,300+ stores and 500+ agencies actively using it by departure.',
     link: 'https://promptshop.co',
   },
   {
-    role: 'Sales Engineer',
+    role: 'Technical Sales Representative',
     company: 'Famic Technologies',
     period: 'May — Oct 2025',
     description: 'Managed the Japan market within a 3-person Asia team, owning distributor relationships and representing the company at CSPI-EXPO 2025 in Chiba, Japan. Delivered in-person technical demos and training at client headquarters across Japan. Translated the full Japanese interface of the company\'s flagship software.',
